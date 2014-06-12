@@ -1,7 +1,7 @@
 # Stage Fright
 
-Tinder meets Soundcloud to change the way judge other's performances.
+Tinder meets Soundcloud to change the way we judge other's singing.
 
 ##Contributions by:
 
-Tommy Carpenito, Amy Foster, Dan Huang, Jason Smith
+Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
