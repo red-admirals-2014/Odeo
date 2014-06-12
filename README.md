@@ -7,21 +7,20 @@ Tinder meets Soundcloud to change the way we judge other's singing.
 A mobile-web first app that allows users to vote on the song clips they like or don't like that have been created by other users in the StageFright community.
 
 ## How to Use the Code
-Cloud Storage for Songs - Amazon S3
-Hosting - Heroku
-Backend - Ruby on the Rails
-Frontend - Ember.js MVC Framework (JS, HTML5, CSS3)
+  - Cloud Storage for Songs - Amazon S3
+  - Hosting - Heroku
+  - Backend - Ruby on the Rails
+  - Frontend - Ember.js MVC Framework (JS, HTML5, CSS3)
 
 ### Ember.js
 Ember.js allows us to send a single page to the user and give them the whole app experience from there.
 
-## LInk to Heroku
-- Tommy - 
+## Link to Heroku
+  - Tommy to update
 
 ##Contributions by:
 
 Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
-
 
 ## Project Workflow
 
