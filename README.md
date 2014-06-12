@@ -64,5 +64,4 @@ Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
   - Agreed To Coding Conventions throughout the stack
   - Unifying Style for the Site's Design
   - Work delegation: Work on what you want to work on, not necessarily what you're great at.
-  - 
 
