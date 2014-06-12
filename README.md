@@ -43,6 +43,7 @@ Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
 ### Team Dynamics
   - Pairing: Soloing as needed.  Pairing will be called out during feature assignments/stand-ups/scrums.
   - Standups: Morning and Mid-day (~9:15am and 3 or 4pm and then impromptu team standups as needed)
+  - Retrospectives: After end of the day Standup, quick 5-10 minutes going over what did or did not work and points of improvement.
   - When We Work: 9-1  Lunch Time 12:30-1:30pm errday
   - Team: Team
 
@@ -58,6 +59,11 @@ Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
   - Successful Git WOrkflow
   - Agile Development and Product Planning/Execution
   - Leadership Skills (Tommmy Derulo)
+
+### Coding Strategies
+  - All pull requests must be accompanied by a respective test suite for any feature.
+  - Agreed To Coding Conventions throughout the stack
+  - Unifying Style for the Site's Design
+  - Work delegation: Work on what you want to work on, not necessarily what you're great at.
   - 
-  
 
