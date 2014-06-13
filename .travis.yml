@@ -9,7 +9,7 @@ env:
 - DB=postgresql
 
 before_script:
-  -psql -c 'create database stage_fright_test' -U postgres
+  -psql -c 'create database stage_fright_test;' -U postgres
 
 script:
   -STAGE_FRIGHT=test bundle exec rake db:migrate --trace

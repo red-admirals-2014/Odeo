@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   host: localhost
-  username:
+  username: postgres
   password:
   database: stage_fright_dev
   pool: 5
@@ -13,16 +13,16 @@ development:
 test:
   adapter: postgresql
   host: localhost
-  username:
+  username: postgres
   password:
-  database: stage_fright_dev
+  database: stage_fright_test
   pool: 5
   timeout: 5000
 
 production:
   adapter: postgresql
   host: localhost
-  username:
+  username: postgres
   password:
   database: stage_fright
   pool: 5
