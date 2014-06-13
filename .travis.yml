@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+  - 1.22.15
+
+# env:
+# - DB=postgresql
+
+# before_script:
+#   -psql -c 'create database stage_fright_test' -U postgres
+
+# script:
+#   -GENOME_USER=stage_fright_ci RAILS_ENV=test bundle exec rake --trace db:migrate test:all
