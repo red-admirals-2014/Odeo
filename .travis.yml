@@ -16,4 +16,4 @@ script:
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
 
-bundler_args: --binstubs=./bundler_stubs
+# bundler_args: --binstubs=./bundler_stubs
