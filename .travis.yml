@@ -1,0 +1,17 @@
+language: ruby
+rvm:
+  - "2.0.0"
+  # - jruby-18mode # JRuby in 1.8 mode
+  # - jruby-19mode # JRuby in 1.9 mode
+  # - rbx
+
+env:
+- DB=postgresql
+
+before_script:
+  - psql -c 'create database stage_fright_test;' -U postgres
+
+script:
+  - bundle exec rspec spec/
+
+# bundler_args: --binstubs=./bundler_stubs
