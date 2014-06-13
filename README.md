@@ -30,7 +30,7 @@ Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
   - Tommy - Saturday
   - Jason - Sunday
   - Amy - Monday
-  
+
 - Features will be on separate, unique branches.
 
 ### Team Roles
@@ -65,3 +65,6 @@ Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
   - Unifying Style for the Site's Design
   - Work delegation: Work on what you want to work on, not necessarily what you're great at.
 
+### Project Outline
+
+[Imgur](http://i.imgur.com/zv44vOG.jpg)
