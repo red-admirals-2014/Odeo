@@ -5,11 +5,15 @@ rvm:
   - jruby-19mode # JRuby in 1.9 mode
   - rbx
 
-# env:
-# - DB=postgresql
+env:
+- DB=postgresql
 
-# before_script:
-#   -psql -c 'create database stage_fright_test' -U postgres
+before_script:
+  -psql -c 'create database stage_fright_test' -U postgres
 
-# script:
-#   -GENOME_USER=stage_fright_ci RAILS_ENV=test bundle exec rake --trace db:migrate test:all
+script:
+  -STAGE_FRIGHT=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
+
+bundler_args: --binstubs=./bundler_stubs
