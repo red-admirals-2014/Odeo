@@ -1,31 +1,29 @@
-
-postgresql : &postgresql
-  adapter: postgresql
-  username: postgres
-  password:
-  database: stage_fright_<%= Rails.env %>
-  min_messages: ERROR
-
-
-default: &defaults
-  timeout: 5000
-  # adapter: postgresql
-  encoding: unicode
-  host: localhost
-  <<: *<%= ENV['DB'] || "postgresql" %>
-  pool: 5
-
 development:
-  <<: *defaults
-  # database: stage_fright_development
+  adapter: postgresql
+  host: localhost
+  username:
+  password:
+  database: stage_fright_dev
+  pool: 5
+  timeout: 5000
 
-
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
 test:
-  <<: *defaults
-  # database: stage_fright_test
+  adapter: postgresql
+  host: localhost
+  username:
+  password:
+  database: stage_fright_dev
+  pool: 5
+  timeout: 5000
 
 production:
-  <<: *defaults
-  # database: stage_fright_production
-  # username: stage_fright
-  # password: <%= ENV['STAGE_FRIGHT_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  host: localhost
+  username:
+  password:
+  database: stage_fright
+  pool: 5
+  timeout: 5000
