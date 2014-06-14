@@ -1,0 +1,88 @@
+@media (max-width: 720px){
+  .login {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 10%;
+    width: 60%;
+    background-color: #3658d1;
+    border:none;
+    border-radius: 0.6em;
+    box-shadow: 0 5px 5px #ccc;
+  }
+
+  .login:hover {
+    background-color: #3a62ef;
+  }
+
+  button:active {
+    outline: 0;
+    outline-style:none;
+    outline-width:0;
+  }
+
+  .login a{
+    text-decoration: none;
+    font-size: 2.7em;
+    color: white;
+  }
+
+  .icons{
+    width:30px;
+    height:30px;
+  }
+
+  .navbar{
+    padding: 5px;
+    width: 100%;
+    border-bottom: 1px solid #dddddd
+  }
+
+  ul{
+    list-style: none;
+  }
+
+  ul li{
+    display: inline;
+  }
+
+  ul li a{
+    font-size: 1.5em;
+    color: black;
+    text-decoration: none;
+  }
+
+.click-vote{
+  padding-bottom: 50px;
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;
+  height: 130px;
+  position: absolute;
+  bottom: 0;
+}
+
+.b-large{
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid 15px #dddddd;
+  background-color: white;
+}
+
+.b-med{
+  width: 100px;
+  height: 100px;
+  border: solid 15px #dddddd;
+  border-radius: 50%;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-color: white;
+}
+
+
+} /* End Media Query */
