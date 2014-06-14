@@ -1,4 +1,4 @@
-@media (min-width: 400px) {
+@media (min-width: 600px) {
   .login {
     margin: auto;
     position: absolute;
@@ -61,7 +61,7 @@
   }
 
   .click-vote{
-    padding-bottom: 50px;
+    padding-bottom: 25px;
     padding-top: 50px;
     text-align: center;
     width: 100%;
@@ -78,7 +78,7 @@
   }
 
   .b-large:hover{
-    background-color: #efefef
+    background-color: #f6f6f6
   }
 
   .b-med{
@@ -94,7 +94,7 @@
   }
 
   .b-med:hover{
-    background-color: #ff556b
+    background-color: #f23b4a
   }
 
   img{
@@ -107,7 +107,35 @@
     height: 40px;
   }
 
+  .modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background-color:rgba(0, 0, 0, 0.8);
+    padding:8px;
+    border: 1px solid #adadad
+}
 
+  .clip-form{
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .modal-content{
+    text-align: center;
+  }
 
 
 } /* End Media Query */
