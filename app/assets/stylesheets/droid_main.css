@@ -1,0 +1,49 @@
+
+@media (max-width: 720px){
+
+body {
+  background-color: #f7f7f7;
+}
+
+.login {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 10%;
+  width: 60%;
+  background-color: #507cff;
+  border:none;
+  border-radius: 0.6em;
+  box-shadow: 0 5px 5px #ccc;
+}
+
+.login:hover {
+  background-color: #5f90ff;
+}
+
+button:active {
+  outline: 0;
+  outline-style:none;
+  outline-width:0;
+}
+
+.login a{
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
+  padding: 20px 90px;
+}
+
+
+
+
+
+
+
+
+
+
+} /* End Media Query */
