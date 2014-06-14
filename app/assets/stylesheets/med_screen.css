@@ -1,4 +1,4 @@
-@media (min-width: 400px) {
+@media (min-width: 320px) {
   .login {
     margin: auto;
     position: absolute;
@@ -78,7 +78,7 @@
   }
 
   .b-large:hover{
-    background-color: #efefef
+    background-color: #f6f6f6
   }
 
   .b-med{
@@ -94,7 +94,7 @@
   }
 
   .b-med:hover{
-    background-color: #ff556b
+    background-color: #f23b4a
   }
 
   img{
