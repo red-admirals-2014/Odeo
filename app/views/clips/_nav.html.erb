@@ -1,13 +1,15 @@
+
 <div class="navbar">
-<ul>
-  <li><a href="">link1</a></li>
-  <li><a href="">link2</a></li>
-  <li><a href="">link3</a></li>
-</ul>
+<center>
+  <%= link_to 'rating', signout_path, id: "sign_out" %>
+  <%= link_to 'Stage Fright', signout_path, id: "brand" %>
+  <%= link_to 'logout', signout_path, id: "sign_out" %>
+</center>
 </div>
 
+
 <div class="click-vote">
-  <button class="b-large"><%= link_to (image_tag "thumb21.svg"), root_path %></button>
-  <button class="b-med">i</button>
-  <button class="b-large"><%= link_to (image_tag "thumb22.svg"), root_path %></button>
+  <button class="b-large"><%= image_tag "delete30.svg" %></button>
+  <button class="b-med"><%= image_tag "microphone28.svg", id: 'mic' %></button>
+  <button class="b-large"><%= image_tag "check.svg" %></button>
 </div>
