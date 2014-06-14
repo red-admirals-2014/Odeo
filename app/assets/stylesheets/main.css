@@ -1,2 +1,11 @@
+@import url(http://fonts.googleapis.com/css?family=Grand+Hotel|Pacifico|Vibur);
 
+/*
+font-family: 'Grand Hotel', cursive;
+font-family: 'Pacifico', cursive;
+font-family: 'Vibur', cursive;
+*/
 
+html{
+  min-width: 600px;
+}

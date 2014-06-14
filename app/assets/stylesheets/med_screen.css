@@ -1,4 +1,4 @@
-@media (max-width: 720px){
+@media (min-width: 400px) {
   .login {
     margin: auto;
     position: absolute;
@@ -48,8 +48,16 @@
 
   .navbar a{
     text-decoration: none;
-    margin-left: 85px;
-    margin-right: 85px;
+    /*margin-left: 85px;
+    margin-right: 85px;*/
+  }
+
+  #brand{
+    font-family: 'Pacifico', cursive;
+    color: #ff4052;
+    font-size: 5em;
+    margin-left: 150px;
+    margin-right: 150px;
   }
 
   .click-vote{
@@ -90,6 +98,8 @@
     width: 40px;
     height: 40px;
   }
+
+
 
 
 } /* End Media Query */
