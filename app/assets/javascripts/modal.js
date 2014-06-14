@@ -8,9 +8,9 @@ function eventListeners(){
 };
 
 function showClipModal(){
-  $('.modal').css('display', 'initial')
+  $('.modal').fadeIn()
 }
 
 function closeClipModal(){
-  $('.modal').css('display', 'none')
+  $('.modal').fadeOut()
 }
