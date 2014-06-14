@@ -1,4 +1,16 @@
 <div class="modal-content">
   <h1>Sing a ditty</h1>
   <button class='close-new-clip'>close</button>
+
+  <form action="@cloudconvert[url]" method="post" enctype="multipart/form-data">
+  <input type="hidden" name="input" value="upload">
+  <input type="hidden" name="outputformat" value="mp3">
+  <input type="submit" value="Upload">
+</form>
+
+<%= form_field action=@cloudconvert[url] method="post" enctype="multipart/form-data" %>
+ <input type="file" name="audio" accept="audio/*" capture="microphone">
+ <input type="submit" value="Upload">
+</form>
+
 </div>

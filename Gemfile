@@ -4,6 +4,7 @@ gem 'dotenv-rails', :groups => [:development, :test]
 gem 'rails', '4.1.1'
 gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
+gem 'cloudconvert'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
