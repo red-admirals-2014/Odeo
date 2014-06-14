@@ -77,6 +77,10 @@
     background-color: white;
   }
 
+  .b-large:hover{
+    background-color: #efefef
+  }
+
   .b-med{
     width: 100px;
     height: 100px;
@@ -87,6 +91,10 @@
     background-color: #ff4052;
     color: white;
     font-size: 2em;
+  }
+
+  .b-med:hover{
+    background-color: #ff556b
   }
 
   img{
