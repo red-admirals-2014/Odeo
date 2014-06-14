@@ -32,11 +32,11 @@ var votesModel = function(){
 votesModel.prototype = {
 
 	upVoteClip: function(){
-		// debugger
+		
 	},
 
 	downVoteClip: function(){
-		debugger
+		
 	}
 
 }
