@@ -32,6 +32,7 @@ var votesModel = function(){
 votesModel.prototype = {
 
 	upVoteClip: function(){
+		debugger
 		
 	},
 
@@ -48,6 +49,7 @@ votesModel.prototype = {
 var votesView = function(){
 	this.upVote = $('[data-ui="upVote"]')
 	this.downVote = $('[data-ui="downVote"]')
+	this.songClip = $('.soundClip')
 }
 
 
