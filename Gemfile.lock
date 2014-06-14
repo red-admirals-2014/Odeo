@@ -29,7 +29,7 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     builder (3.2.2)
-    capybara (2.3.0)
+    capybara (2.1.0)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
@@ -44,7 +44,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.7.0)
-    database_cleaner (1.3.0)
+    database_cleaner (1.0.1)
     diff-lcs (1.2.5)
     dotenv (0.11.1)
       dotenv-deployment (~> 0.0.2)
@@ -58,7 +58,7 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
-    faker (1.3.0)
+    faker (1.1.2)
       i18n (~> 0.5)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
@@ -123,26 +123,18 @@ GEM
     rake (10.3.2)
     rdoc (4.1.1)
       json (~> 1.4)
-    rspec (3.0.0)
-      rspec-core (~> 3.0.0)
-      rspec-expectations (~> 3.0.0)
-      rspec-mocks (~> 3.0.0)
-    rspec-core (3.0.1)
-      rspec-support (~> 3.0.0)
-    rspec-expectations (3.0.1)
-      diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.0.0)
-    rspec-mocks (3.0.1)
-      rspec-support (~> 3.0.0)
-    rspec-rails (3.0.1)
+    rspec-core (2.14.8)
+    rspec-expectations (2.14.5)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.14.6)
+    rspec-rails (2.14.2)
       actionpack (>= 3.0)
+      activemodel (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
-      rspec-core (~> 3.0.0)
-      rspec-expectations (~> 3.0.0)
-      rspec-mocks (~> 3.0.0)
-      rspec-support (~> 3.0.0)
-    rspec-support (3.0.0)
+      rspec-core (~> 2.14.0)
+      rspec-expectations (~> 2.14.0)
+      rspec-mocks (~> 2.14.0)
     rubyzip (1.1.4)
     sass (3.2.19)
     sass-rails (4.0.3)
@@ -153,8 +145,8 @@ GEM
     sdoc (0.4.0)
       json (~> 1.8)
       rdoc (~> 4.0, < 5.0)
-    selenium-webdriver (2.42.0)
-      childprocess (>= 0.5.0)
+    selenium-webdriver (2.39.0)
+      childprocess (>= 0.2.5)
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0.4)
@@ -191,23 +183,23 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  capybara
+  capybara (~> 2.1.0)
   coffee-rails (~> 4.0.0)
-  database_cleaner
+  database_cleaner (~> 1.0.1)
   dotenv-rails
   factory_girl_rails (~> 4.2.1)
-  faker
+  faker (~> 1.1.2)
   jbuilder (~> 2.0)
   jquery-rails
   omniauth
   omniauth-facebook (= 1.4.0)
   pg
   rails (= 4.1.1)
-  rspec
-  rspec-rails
+  rspec-mocks (~> 2.14.0)
+  rspec-rails (~> 2.14.0)
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
-  selenium-webdriver
+  selenium-webdriver (~> 2.39.0)
   shoulda-matchers
   spring
   turbolinks
