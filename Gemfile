@@ -31,6 +31,8 @@ gem 'spring',        group: :development
 gem 'rspec'
 
 
+
+
 group :development, :test  do
   gem 'rspec-rails'
   gem 'factory_girl_rails', '~> 4.2.1'
@@ -44,5 +46,6 @@ group :test do
   gem 'database_cleaner'
 end
 
-gem 'jquery-rails'
+
+
 
