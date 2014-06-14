@@ -2,6 +2,13 @@
 <div id="user_nav">
   <% if current_user %>
     <%= render 'nav' %>
+
+  <div class="modal">
+    <div class='clip-form'>
+        <%= render 'clips/new_clip' %>
+    </div>
+  </div>
+
   <% else %>
       <%= render 'login' %>
   <% end %>
