@@ -1,4 +1,4 @@
-@media (min-width: 320px) {
+@media (min-width: 600px) {
   .login {
     margin: auto;
     position: absolute;
@@ -61,7 +61,7 @@
   }
 
   .click-vote{
-    padding-bottom: 50px;
+    padding-bottom: 25px;
     padding-top: 50px;
     text-align: center;
     width: 100%;
@@ -120,22 +120,22 @@
     border: 1px solid #adadad
 }
 
-.clip-form{
-  width: 70%;
-  height: 50%;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background-color: white;
-  border-radius: 5px;
-}
+  .clip-form{
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+  }
 
-.content{
-  text-align: center;
-}
+  .modal-content{
+    text-align: center;
+  }
 
 
 } /* End Media Query */
