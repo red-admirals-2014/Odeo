@@ -1,13 +1,16 @@
 <div class="modal-content">
   <h1>Sing a ditty</h1>
   <button class='close-new-clip'>close</button>
-@response['url']
 
-<form action=<%="https:#{@response['url']}"%> method="POST" enctype="multipart/form-data">
+  <%= @response['url'] %>
+
+<form>
      <input type="hidden" name="input" value="upload">
      <input type="hidden" name="outputformat" value="mp3">
-     <input type="file" name="file">
+     <input type="file" name="file" accept="audio/*">
      <input type="submit">
 </form>
+
+
 
 </div>
