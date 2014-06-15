@@ -1,4 +1,4 @@
-@media (min-width : 320px) and (max-width : 480px) {
+@media (max-width : 600px) {
 
   .login {
     margin: auto;
@@ -57,8 +57,8 @@
     font-family: 'Pacifico', cursive;
     color: #ff4052;
     font-size: 3em;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .click-vote{
