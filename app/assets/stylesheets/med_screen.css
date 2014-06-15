@@ -150,7 +150,7 @@
 
   }
 
-  #theclipper{
+  .jp-play{
     height: 400px;
     width: 400px;
     position: absolute;
@@ -160,6 +160,8 @@
     top: 0;
     margin: auto;
   }
+
+
 
 
 } /* End Media Query */
