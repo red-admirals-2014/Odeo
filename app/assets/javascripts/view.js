@@ -11,19 +11,35 @@ Modal.prototype = {
 };
 
 
-function Play(){};
+
+function Play(){
+  this.player = $("#jquery_jplayer_1");
+};
 
 Play.prototype = {
   playSong: function(){
-    $("#jquery_jplayer_1").jPlayer({
+    this.player.jPlayer({
       ready: function(){
         $(this).jPlayer("setMedia", {
-         m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
+         mp3: "https://srv23.cloudconvert.org/download/hfJe5Xy9",
         });
       },
-      supplied: "m4a"
+      supplied: "mp3"
     });
+  },
+  playNextSong: function(){
+    console.log('**** INSIDE PLAY NEXT SONG ****')
+    $.ajax({
+      url: '/clips/next',
+      type: 'GET'
+    }).done(function(response){
+      console.log("**** INSIDE DONE OF PLAY NEXT SONG ****")
+      console.log(response)
+      this.player.jPlayer("setMedia", {
+        mp3: response
+      })
+      this.player.jPlayer("play")
+    }.bind(this))
   }
 }
-
 
