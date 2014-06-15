@@ -1,3 +1,3 @@
-class clip < ActiveRecord::Base
+class Clip < ActiveRecord::Base
   belongs_to :user
 end
