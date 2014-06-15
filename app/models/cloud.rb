@@ -20,7 +20,7 @@ class Cloud
         outputformat: 'mp3'
       }
     })
-    url = "https:" + response['url']
+    url = "https:#{response['url']}"
     url
   end
 end
