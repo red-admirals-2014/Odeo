@@ -1,9 +1,9 @@
 
 <div class="navbar">
 <center>
-  <%= link_to 'rating', signout_path, id: "rating" %>
+  <button class="navbuts"><%= link_to (image_tag 'percent1.svg', id:'navlogo'), signout_path, id: "rating" %></button>
   <%= link_to 'Oudio', signout_path, id: "brand" %>
-  <%= link_to 'logout', signout_path, id: "sign_out" %>
+  <button class="navbuts"><%= link_to (image_tag 'logout.svg', id:'navlogo'), signout_path, id: "sign_out" %></button>
 </center>
 </div>
 
