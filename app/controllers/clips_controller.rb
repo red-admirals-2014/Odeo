@@ -5,8 +5,6 @@ class ClipsController < ApplicationController
     @response = HTTParty.post("https://api.cloudconvert.org/process?apikey=#{ENV['CLOUD_API_KEY']}&inputformat=wav&outputformat=mp3")
     puts @response['url']
     @cloudconvert = Cloud.new
-    puts "****************** CLOUD CONVERT ************"
-    puts @cloudconvert.process_url
   end
 
   def new

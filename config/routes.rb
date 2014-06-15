@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   root to: 'clips#index'
 
+  resources :users, only: [:index] do  
+  	resources :clips, only: [:create]
+  end
+
 end
