@@ -165,4 +165,178 @@
       height:30px;
       width:30px;
   }
+} /* End Media Query for 600px */
+
+
+
+
+
+
+@media (max-width: 480px) {
+  .login {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 10%;
+    width: 60%;
+    background-color: #3658d1;
+    border:none;
+    border-radius: 0.6em;
+    box-shadow: 0 5px 5px #ccc;
+  }
+
+  .login:hover {
+    background-color: #3a62ef;
+  }
+
+  button{
+    outline: 0;
+    outline-style:none;
+    outline-width:0;
+  }
+
+  .login a{
+    text-decoration: none;
+    font-size: 2.3em;
+    color: white;
+  }
+
+  .icons{
+    width:30px;
+    height:30px;
+  }
+
+  .navbar{
+    top:0;
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+  }
+
+  center{
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .navbar a{
+    text-decoration: none;
+    /*margin-left: 85px;
+    margin-right: 85px;*/
+  }
+
+  #brand{
+    font-family: 'Pacifico', cursive;
+    color: #ff4052;
+    font-size: 3.5em;
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .click-vote{
+    padding-bottom: 25px;
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .b-large{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 15px #dddddd;
+    background-color: white;
+  }
+
+  .b-large:hover{
+    background-color: #f6f6f6
+  }
+
+  .b-med{
+    width: 100px;
+    height: 100px;
+    border: solid 15px #dddddd;
+    border-radius: 50%;
+    margin-left: -15px;
+    margin-right: -15px;
+    background-color: #ff4052;
+    color: white;
+    font-size: 2em;
+  }
+
+  .b-med:hover{
+    background-color: #f23b4a
+  }
+
+  img{
+    width: 40px;
+    height: 40px;
+  }
+
+  #mic{
+    width: 40px;
+    height: 40px;
+  }
+
+  .modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    margin: auto;
+    background-color:rgba(0, 0, 0, 0.8);
+    padding:8px;
+    border: 1px solid #adadad
+}
+
+  .clip-form{
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .modal-content{
+    text-align: center;
+  }
+
+  #cassette{
+    height: 370px;
+    width: 370px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+  }
+
+  .navbuts{
+    height:80px;
+    width:80px;
+    border-radius: 50%;
+    border: solid 2px #dddddd;
+    background-color: white;
+  }
+
+
+  .navbuts:hover{
+      background-color: #f6f6f6;
+  }
+
+  #navlogo{
+      height:30px;
+      width:30px;
+  }
 } /* End Media Query */
