@@ -1,4 +1,5 @@
-@media (min-width: 600px) {
+@media (max-width : 600px) {
+
   .login {
     margin: auto;
     position: absolute;
@@ -6,7 +7,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    height: 10%;
+    height: 20%;
     width: 60%;
     background-color: #3658d1;
     border:none;
@@ -26,7 +27,7 @@
 
   .login a{
     text-decoration: none;
-    font-size: 2.3em;
+    font-size: 1.2em;
     color: white;
   }
 
@@ -55,9 +56,9 @@
   #brand{
     font-family: 'Pacifico', cursive;
     color: #ff4052;
-    font-size: 5em;
-    margin-left: 80px;
-    margin-right: 80px;
+    font-size: 3em;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 
   .click-vote{
@@ -70,8 +71,8 @@
   }
 
   .b-large{
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: solid 15px #dddddd;
     background-color: white;
@@ -82,8 +83,8 @@
   }
 
   .b-med{
-    width: 100px;
-    height: 100px;
+    width: 75px;
+    height: 75px;
     border: solid 15px #dddddd;
     border-radius: 50%;
     margin-left: -15px;
@@ -98,13 +99,13 @@
   }
 
   img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
 
   #mic{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
   }
 
   .modal {
@@ -138,8 +139,8 @@
   }
 
   #cassette{
-    height: 400px;
-    width: 400px;
+    height: 230px;
+    width: 230px;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -149,11 +150,11 @@
   }
 
   .navbuts{
-      height:80px;
-      width:80px;
-      border-radius: 50%;
-      border: solid 2px #dddddd;
-      background-color: white;
+    height:60px;
+    width:60px;
+    /*border-radius: 50%;*/
+    border: none;
+    background-color: white;
   }
 
 
@@ -165,4 +166,5 @@
       height:30px;
       width:30px;
   }
-} /* End Media Query for 600px */
+ /* End Media Query for iphone */
+}

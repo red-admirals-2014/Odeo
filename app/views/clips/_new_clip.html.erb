@@ -2,7 +2,7 @@
   <h1>Sing a ditty</h1>
   <button class='close-new-clip'>close</button>
 
-  <%= form_tag(@cloudconvert.process_url, id: "clip_upload", action: :upload, multipart: true, remote: true) do %>
+  <%= form_tag(@cloudconvert.process_url, id: "clip_upload", :class => "#{current_user.id}", action: :upload, multipart: true, remote: true) do %>
     <%= hidden_field_tag 'input', 'upload' %>
     <%= hidden_field_tag 'outputformat', 'mp3' %>
     <%= file_field_tag 'file' %>
