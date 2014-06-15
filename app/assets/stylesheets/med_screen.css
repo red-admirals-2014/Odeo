@@ -137,5 +137,17 @@
     text-align: center;
   }
 
+  #cassette{
+    height: 400px;
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+  }
+
+
 
 } /* End Media Query */
