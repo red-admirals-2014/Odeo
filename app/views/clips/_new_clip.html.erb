@@ -2,15 +2,10 @@
   <h1>Sing a ditty</h1>
   <button class='close-new-clip'>close</button>
 
-  <%= @response['url'] %>
-
-<form>
-     <input type="hidden" name="input" value="upload">
-     <input type="hidden" name="outputformat" value="mp3">
-     <input type="file" name="file" accept="audio/*">
-     <input type="submit">
-</form>
-
-
-
+  <%= form_tag(@cloudconvert.process_url, id: "clip_upload", action: :upload, multipart: true, remote: true) do %>
+    <%= hidden_field_tag 'input', 'upload' %>
+    <%= hidden_field_tag 'outputformat', 'mp3' %>
+    <%= file_field_tag 'file' %>
+    <%= submit_tag "Submit" %>
+  <% end %>
 </div>
