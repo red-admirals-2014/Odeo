@@ -5,7 +5,14 @@
   <%= form_tag(@cloudconvert.process_url, id: "clip_upload", action: :upload, multipart: true, remote: true) do %>
     <%= hidden_field_tag 'input', 'upload' %>
     <%= hidden_field_tag 'outputformat', 'mp3' %>
-    <%= file_field_tag 'file' %>
+    <%= file_field_tag 'file', accept: 'audio/*;capture=microphone'%>
     <%= submit_tag "Submit" %>
   <% end %>
+  <button onclick="startRecording(this);">Record</button>
+  <button onclick="stopRecording(this);" disabled>Stop Recording</button>
+  <h2>Recordings</h2>
+  <ul id="recordingslist"></ul>
+  <pre id="log">
+  </pre>
+
 </div>
