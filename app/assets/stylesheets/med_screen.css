@@ -26,7 +26,7 @@
 
   .login a{
     text-decoration: none;
-    font-size: 2.7em;
+    font-size: 2.3em;
     color: white;
   }
 
@@ -152,8 +152,17 @@
       height:80px;
       width:80px;
       border-radius: 50%;
-      border: solid 3px #dddddd;
+      border: solid 2px #dddddd;
       background-color: white;
   }
 
+
+  .navbuts:hover{
+      background-color: #f6f6f6;
+  }
+
+  #navlogo{
+      height:30px;
+      width:30px;
+  }
 } /* End Media Query */
