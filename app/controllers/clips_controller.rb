@@ -12,23 +12,14 @@ class ClipsController < ApplicationController
   end
 
   def create
-    #logic
-    if #clip has successfully been created or started uploading
+    user = User.find(session[:user_id])
+    clip = user.clips.new(clip_link: params[:url])
 
+    if clip.save
       redirect_to root_path
     else
-      #
+      puts "This failed"
     end
   end
-
-  # def new
-  # end
-
-  # def upload
-  #   uploaded_io = params[:clip][:audio]
-  #   File.open(Rails.root.join('public', 'uploads', uploaded_io.original_filename), 'wb') do |file|
-  #     HTTParty.post()
-  #   end
-  # end
 
 end

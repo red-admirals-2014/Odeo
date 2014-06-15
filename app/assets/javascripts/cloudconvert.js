@@ -8,7 +8,6 @@ $(document).ready(function(){
 
 function returnDownloadLink(){
 	$.getJSON(this.url, function(data) {
-	debugger
 		var returnedUrl = data['output'].url
 		insertIntoDatabase(returnedUrl)
 	})
@@ -22,12 +21,11 @@ function errorUploadingClip(){
 
 function insertIntoDatabase(returnedURL){
 	$.ajax({
-		// url: "/users/" +  + "/clips(.:format)",
+		url: "/clips",
 		type: "POST", 
-		data: returnedURL
+		data: {url: returnedURL}
 	}).success(displayInfo)
 }
 
 function displayInfo(data){
-	debugger
 }
