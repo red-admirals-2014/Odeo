@@ -24,19 +24,26 @@ class ClipsController < ApplicationController
 
 
   def next
-    p "these are our params"
+    p "PARAMS IS ****" * 20
     p params
-    @clip = Clip.where(clip_link: params[:url]).first
-    if params[:vote] = 'upvote'
-      Vote.create(user_id: session[:user_id], clip_id: @clip.id, like: true)
+    # next_song_really = Clip.find(next_song.clip_id).clip_link 
+    clip = Clip.where(clip_link: params[:url]).first
+    p "CLIP IS *********"
+    p clip
+    next_song = Clip.all.sample#.votes.where.not(user_id: 1).first
+    p "#" *20
+    p params[:url]
+    if params[:vote] == 'upvote'
+      vote = Vote.new(user_id: session[:user_id], clip_id: clip.id, like: true)
     else
-      Vote.create(user_id: session[:user_id], clip_id: @clip.id, like: false)
+      vote = Vote.new(user_id: session[:user_id], clip_id: clip.id, like: false)
     end
-    @next_song = Clip.where(created_at: (Time.now - 1.day)..Time.now + 1.day).sample.votes.where.not(user_id: 1).first
-    @next_song_really = Clip.find(@next_song.clip_id).clip_link 
+    if vote.save
+      render :text => next_song.clip_link
+    else
+      render :text => next_song.clip_link
+    end
 
-    render :text => @next_song_really
-    # logic to make sure they don't vote on the same song twice
   end
 
 end
