@@ -1,3 +1,5 @@
+// Modal View
+
 function Modal(){};
 
 Modal.prototype = {
@@ -11,7 +13,7 @@ Modal.prototype = {
 };
 
 
-
+// Play View
 function Play(){
   this.player = $("#jquery_jplayer_1");
 };
@@ -42,5 +44,4 @@ Play.prototype = {
       this.player.jPlayer("play")
     }.bind(this))
   }
-}
-
+};

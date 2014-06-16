@@ -2,17 +2,18 @@
 <div id="user_nav">
 
   <% if current_user %>
-
    <%= render 'nav' %>
    <%= render 'player' %>
-  <div class="modal">
-  <div class='clip-form'>
-      <%= render 'clips/new_clip' %>
-  </div>
-  </div>
-
+      <div class="modal">
+        <div class='clip-form'>
+            <%= render 'clips/new_clip' %>
+        </div>
+      </div>
   <% else %>
-      <%= render 'login' %>
+      <div id='index-wrapper'>
+        <h1>Oudio</h1>
+        <%= render 'login' %>
+      </div>
   <% end %>
 
 </div>

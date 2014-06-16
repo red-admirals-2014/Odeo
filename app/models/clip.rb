@@ -10,5 +10,4 @@ class Clip < ActiveRecord::Base
   		self.clip_link = "https:" + self.clip_link
   	end
   end
-
 end
