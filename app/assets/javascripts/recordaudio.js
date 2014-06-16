@@ -1,16 +1,4 @@
-// window.onload = function() {
-//   // var form = document.querySelector('form')
-//   // audio = new AudioContext
-//   var recordButton = document.querySelector('.record')
-//   var stopButton = document.querySelector('.stop')
-//   var rec = new Recorder(window.AudioContext)
-//   recordButton.addEventListener('click', rec.record())
-//   stopButton.addEventListener('click', rec.stop())
-  
-// }
 
-
-  // <script>
   function __log(e, data) {
     log.innerHTML += "\n" + e + " " + (data || '');
   }
@@ -20,11 +8,8 @@
 
   function startUserMedia(stream) {
     var input = audio_context.createMediaStreamSource(stream);
-    __log('Media stream created.' );
-  __log("input sample rate " +input.context.sampleRate);
     
     input.connect(audio_context.destination);
-    __log('Input connected to audio context destination.');
     
     recorder = new Recorder(input);
     __log('Recorder initialised.');
@@ -42,10 +27,8 @@
     button.disabled = true;
     button.previousElementSibling.disabled = false;
     __log('Stopped recording.');
-    
     // create WAV download link using audio data blob
     createDownloadLink();
-    
     recorder.clear();
   }
 
@@ -56,7 +39,6 @@
       var au = document.createElement('audio');
       var hf = document.createElement('a');
       
-      au.controls = true;
       au.src = url;
       hf.href = url;
       hf.download = new Date().toISOString() + '.wav';
@@ -66,6 +48,7 @@
       recordingslist.appendChild(li);
     });
   }
+
 
   window.onload = function init() {
     try {
@@ -78,14 +61,10 @@
       window.URL = window.URL || window.webkitURL;
       
       audio_context = new AudioContext;
-      __log('Audio context set up.');
-      __log('navigator.getUserMedia ' + (navigator.getUserMedia ? 'available.' : 'not present!'));
     } catch (e) {
       alert('No web audio support in this browser!');
     }
     
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
-      __log('No live audio input: ' + e);
     });
   };
-  // </script>
