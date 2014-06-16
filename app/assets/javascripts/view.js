@@ -44,5 +44,13 @@ Play.prototype = {
       })
       this.player.jPlayer("play")
     }.bind(this))
+  },
+
+  pauseSong: function(){
+    this.player.jPlayer("pause")
+  },
+
+  unpauseSong: function(){
+    this.player.jPlayer("play")
   }
 };

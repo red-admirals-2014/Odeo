@@ -19,10 +19,12 @@ Controller.prototype = {
 
   openModal: function(){
     this.modalView.showModal();
+    this.playView.pauseSong();
   },
 
   closeModal: function(){
     this.modalView.closeModal();
+    this.playView.unpauseSong();
   },
 
   triggerPlay: function(){
