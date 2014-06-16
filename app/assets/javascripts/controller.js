@@ -32,7 +32,16 @@ Controller.prototype = {
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
-    this.playView.playNextSong();
+    //
+    // $.ajax({
+    //   url: '/votes/create',
+    //   type: 'POST'
+    // }).done(function(response){
+    //   console.log("**** Voted!!! ****")
+    //   console.log(response)
+    // }.bind(this))
+
+    this.playView.playNextSong(event);
   }
 } //End controller prototype
 

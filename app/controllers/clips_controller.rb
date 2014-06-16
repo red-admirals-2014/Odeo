@@ -24,7 +24,20 @@ class ClipsController < ApplicationController
 
 
   def next
-    render :text => "https://srv23.cloudconvert.org/download/ZScxGvd2"
+    # next_song_really = Clip.find(next_song.clip_id).clip_link 
+    clip = Clip.where(clip_link: params[:url]).first
+    next_song = Clip.all.sample#.votes.where.not(user_id: 1).first
+    if params[:vote] == 'upvote'
+      vote = Vote.new(user_id: session[:user_id], clip_id: clip.id, like: true)
+    else
+      vote = Vote.new(user_id: session[:user_id], clip_id: clip.id, like: false)
+    end
+    if vote.save
+      render :text => next_song.clip_link
+    else
+      render :text => next_song.clip_link
+    end
+
   end
 
 end
