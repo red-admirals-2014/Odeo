@@ -59,10 +59,10 @@ class ClipsController < ApplicationController
         p "This is the next song"
         p next_song
         render :text => next_song.clip_link, layout: false
-    else
-    puts "you've voted on everything!"
+      else
+        render :text => "end", layout: false
       # render :text => "you've exhausted all songs"
-    end
+      end
   #       potential_next_songs = Clip.where(created_at: (Time.now - 1.day)..Time.now + 1.day)
     end
   end

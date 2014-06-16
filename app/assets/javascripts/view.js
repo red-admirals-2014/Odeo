@@ -38,6 +38,10 @@ Play.prototype = {
       type: 'GET',
       data: {url: this.player.jPlayer()[0].lastChild.src, vote: event.target.id}
     }).done(function(response){
+      if (response ==="end"){
+        console.log("We made it to the end!")
+        ////// DAN!!!! We need to get that partial in here to tell the user they've exhausted all their songs!
+      }
       console.log("**** INSIDE DONE OF PLAY NEXT SONG ****")
       console.log(response)
       this.player.jPlayer("setMedia", {
