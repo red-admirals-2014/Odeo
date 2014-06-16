@@ -27,11 +27,12 @@ Play.prototype = {
       supplied: "mp3"
     });
   },
-  playNextSong: function(){
+  playNextSong: function(event){
     console.log('**** INSIDE PLAY NEXT SONG ****')
     $.ajax({
       url: '/clips/next',
-      type: 'GET'
+      type: 'GET',
+      data: {url: this.player.jPlayer()[0].lastChild.src, vote: event.target.id}
     }).done(function(response){
       console.log("**** INSIDE DONE OF PLAY NEXT SONG ****")
       console.log(response)
