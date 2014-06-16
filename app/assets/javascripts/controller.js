@@ -5,16 +5,14 @@ function Controller(modal, play, clip){
 
 Controller.prototype = {
   bindEventListener: function(){
-
-     $('#mic').on('click', this.openModal.bind(this) );
+     $('.click-vote').on('click','.b-med', this.openModal.bind(this) );
      $('.close-new-clip').on('click', this.closeModal.bind(this) );
-     $('.jp-play').on('click', this.triggerPlay.bind(this) );
-     $('.click-vote').on('click', this.voteHandler.bind(this));
+     $('#cassette').on('click', this.triggerPlay.bind(this) );
+     $('.click-vote').on('click', '.vote-button', this.voteHandler.bind(this));
      $('#clip_upload').ajaxForm({
         success: returnDownloadLink,
         error: errorUploadingClip
      });
-
   },
 
   openModal: function(){
@@ -32,6 +30,9 @@ Controller.prototype = {
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
+
+    //
+
     this.playView.playNextSong();
   }
 } //End controller prototype
