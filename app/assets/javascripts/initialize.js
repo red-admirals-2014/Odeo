@@ -5,7 +5,7 @@ function initialize(){
   var recordView = new Modal();
   var playView = new Play();
 
-  var controller = new Controller(recordView, playView);
+  var controller = new Controller(recordView, playView );
   controller.bindEventListener();
 };
 
@@ -26,4 +26,4 @@ function omniauth(){
       fbApiInit = true;
     })
   };
-}
+};

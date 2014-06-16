@@ -1,18 +1,22 @@
 <div class="modal-content">
-  <h1>Sing a ditty</h1>
-  <button class='close-new-clip'>close</button>
+  <h3>Upload or record from your phone!</h3>
 
   <%= form_tag(@cloudconvert.process_url, id: "clip_upload", :class => "#{current_user.id}", action: :upload, multipart: true, remote: true) do %>
     <%= hidden_field_tag 'input', 'upload' %>
     <%= hidden_field_tag 'outputformat', 'mp3' %>
-    <%= file_field_tag 'file', accept: 'audio/*;capture=microphone', value: ' '%>
-    <%= submit_tag "Submit" %>
+    <%= file_field_tag 'file', accept: 'audio/*;capture=microphone', value: ' ', class: 'upload_choice'%>
+    <%= submit_tag "Submit", class: 'close-new-clip' %>
   <% end %>
-  <button onclick="startRecording(this);">Record</button>
-  <button onclick="stopRecording(this);" disabled>Stop Recording</button>
-  <h2>Recordings</h2>
+
+  <h2>Or</h2>
+  <h3>Record yourself from the browser!</h3>
+  <button  class='record' onclick="startRecording(this);"><%= image_tag 'media.svg', id: 'record' %></button>
+  <button  class='record' onclick="stopRecording(this);" disabled><%= image_tag 'stop3.svg', id: 'record' %></button>
+
   <ul id="recordingslist"></ul>
   <pre id="log">
   </pre>
+
+  <button id='cancel' class='close-new-clip'>Cancel</button>
 
 </div>
