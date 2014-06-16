@@ -23,8 +23,24 @@ Controller.prototype = {
     this.modalView.closeModal();
   },
 
+  findNextSong: function(){
+    console.log("inside findNextSong")
+    var self = this
+    $.ajax({
+      url: '/clips/next',
+      type: 'GET',
+      data: {url: this.playView.player.jPlayer()[0].lastChild.src, vote: event.target.id}
+    }).done(function(response){
+      console.log("inside the response")
+      console.log(response)
+      self.playView.playSong(response)
+    })
+  },
+
   triggerPlay: function(){
-    this.playView.playSong();
+    // debugger
+    this.findNextSong()
+    // this.playView.playSong();
   },
 
   voteHandler: function(event, data){
@@ -44,6 +60,7 @@ Controller.prototype = {
     this.playView.playNextSong(event);
   }
 } //End controller prototype
+
 
 
 function returnDownloadLink(){
