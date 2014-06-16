@@ -2,9 +2,6 @@
 class ClipsController < ApplicationController
 
   def index
-    @response = HTTParty.post("https://api.cloudconvert.org/process?apikey=#{ENV['CLOUD_API_KEY']}&inputformat=wav&outputformat=mp3")
-    puts @response['url']
-    @cloudconvert = Cloud.new
   end
 
   def new
@@ -22,6 +19,9 @@ class ClipsController < ApplicationController
     end
   end
 
+  def apikey
+    render :text => ENV['CLOUD_API_KEY']
+  end
 
   def next
     # next_song_really = Clip.find(next_song.clip_id).clip_link

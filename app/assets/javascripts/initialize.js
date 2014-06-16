@@ -1,12 +1,13 @@
 $(document).ready( initialize )
 
-function initialize(){
-  omniauth
-  var recordView = new Modal();
-  var playView = new Play();
+  function initialize(){
+    omniauth
+    var recordView = new Modal();
+    var playView = new Play();
 
-  var controller = new Controller(recordView, playView );
-  controller.bindEventListener();
+    var controller = new Controller(recordView, playView );
+    controller.bindEventListener();
+    controller.setProcessIdToSubmitForm();
 };
 
 function omniauth(){
