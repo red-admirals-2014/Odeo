@@ -22,4 +22,9 @@ class ClipsController < ApplicationController
     end
   end
 
+
+  def next
+    render :text => "https://srv23.cloudconvert.org/download/ZScxGvd2"
+  end
+
 end
