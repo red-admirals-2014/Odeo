@@ -20,11 +20,12 @@ function Play(){
 
 Play.prototype = {
   playSong: function(){
+    console.log("**** INSIDE DONE OF PLAY SONG ****")
     this.player.jPlayer({
       ready: function(){
         $(this).jPlayer("setMedia", {
          mp3: "https://srv23.cloudconvert.org/download/8Vjasw9P",
-        });
+        }).jPlayer("play");
       },
       supplied: "mp3"
     });
