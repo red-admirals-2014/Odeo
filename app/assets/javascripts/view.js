@@ -25,7 +25,7 @@ Play.prototype = {
       ready: function(response){
          console.log('hi')
         $(this).jPlayer("setMedia", {
-         mp3: 'https://srv22.cloudconvert.org/download/7dgpEHFn',
+         mp3: "https://srv23.cloudconvert.org/download/i7F82KLc",
         }).jPlayer("play");
       },
       supplied: "mp3"

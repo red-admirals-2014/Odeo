@@ -33,7 +33,7 @@ Controller.prototype = {
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
-
+    // debugger
     this.playView.playNextSong(event);
   }
 } //End controller prototype
