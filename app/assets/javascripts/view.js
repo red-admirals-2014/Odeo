@@ -19,13 +19,14 @@ function Play(){
 };
 
 Play.prototype = {
-  playSong: function(){
+  playSong: function(response){
+    debugger
     console.log("**** INSIDE DONE OF PLAY SONG ****")
     this.player.jPlayer({
-      ready: function(playResponse){
+      ready: function(response){
          console.log('hi')
         $(this).jPlayer("setMedia", {
-         mp3: "https://srv23.cloudconvert.org/download/8Vjasw9P",
+         mp3: response,
         }).jPlayer("play");
       },
       supplied: "mp3"
