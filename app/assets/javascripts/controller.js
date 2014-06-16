@@ -13,7 +13,9 @@ Controller.prototype = {
         success: returnDownloadLink,
         error: errorUploadingClip
      });
-  },
+     $('#cassette').trigger('click');
+     },
+
 
   openModal: function(){
     this.modalView.showModal();
@@ -30,9 +32,6 @@ Controller.prototype = {
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
-
-    //
-
     this.playView.playNextSong();
   }
 } //End controller prototype
@@ -57,5 +56,4 @@ function insertIntoDatabase(returnedURL){
   }).success(displayInfo)
 };
 
-function displayInfo(data){
-};
+function displayInfo(data){};
