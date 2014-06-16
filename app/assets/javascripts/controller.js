@@ -33,7 +33,15 @@ Controller.prototype = {
 
     //
 
-    this.playView.playNextSong();
+    // $.ajax({
+    //   url: '/votes/create',
+    //   type: 'POST'
+    // }).done(function(response){
+    //   console.log("**** Voted!!! ****")
+    //   console.log(response)
+    // }.bind(this))
+
+    this.playView.playNextSong(event);
   }
 } //End controller prototype
 
