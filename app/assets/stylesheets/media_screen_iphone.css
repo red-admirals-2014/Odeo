@@ -1,5 +1,24 @@
 @media (max-width : 600px) {
-
+  #index-wrapper{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    margin: auto;
+    background-image: url('asiansinger.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #index-wrapper h1{
+    margin-top: 110px;
+    text-align: center;
+    font-size: 5em;
+    font-family: 'Pacifico', cursive;
+    color: #ff4052;
+  }
   .login {
     margin: auto;
     position: absolute;
@@ -7,12 +26,11 @@
     left: 0;
     bottom: 0;
     right: 0;
-    height: 20%;
+    height: 50px;
     width: 60%;
     background-color: #3658d1;
     border:none;
     border-radius: 0.6em;
-    box-shadow: 0 5px 5px #ccc;
   }
 
   .login:hover {
@@ -27,7 +45,7 @@
 
   .login a{
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
     color: white;
   }
 
@@ -122,8 +140,8 @@
 }
 
   .clip-form{
-    width: 70%;
-    height: 50%;
+    width: 80%;
+    height: 80%;
     position: absolute;
     top: 0;
     right: 0;
@@ -138,6 +156,22 @@
     text-align: center;
   }
 
+  #clip_upload input{
+    margin: 2px;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+  }
+
+  .close-new-clip{
+    background-color: #4bc757;
+    color: white;
+  }
+
+   .close-new-clip:hover{
+    background-color: #52d862;
+  }
+
   #cassette{
     height: 230px;
     width: 230px;
@@ -150,9 +184,9 @@
   }
 
   .navbuts{
-    height:60px;
-    width:60px;
-    /*border-radius: 50%;*/
+    height:40px;
+    width:40px;
+    border-radius: 50%;
     border: none;
     background-color: white;
   }
@@ -163,8 +197,43 @@
   }
 
   #navlogo{
-      height:30px;
-      width:30px;
+      height:20px;
+      width:20px;
+  }
+
+   .modal-content h2{
+    font-family: 'Pacifico', cursive;
+    color: #ff3c3d;
+    }
+
+  .record{
+
+    margin-right: 5px;
+    margin-left: 5px;
+    border: none;
+    height:40px;
+    width:40px;
+    border-radius: 50%;
+    background-color: #ececec;
+  }
+
+  #record{
+    height: 15px;
+    width: 15px;
+  }
+
+  .record:hover{
+    background-color: #dedede;
+  }
+
+  #cancel{
+    margin: 0;
+    background-color: #ff3c3d;
+    color: white;
+    width: 100px;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
   }
  /* End Media Query for iphone */
 }
