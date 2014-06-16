@@ -19,12 +19,13 @@ function Play(){
 };
 
 Play.prototype = {
-  playSong: function(){
+  initPlayer: function(response){
     console.log("**** INSIDE DONE OF PLAY SONG ****")
     this.player.jPlayer({
-      ready: function(){
+      ready: function(response){
+         console.log('hi')
         $(this).jPlayer("setMedia", {
-         mp3: "https://srv23.cloudconvert.org/download/8Vjasw9P",
+         mp3: "https://srv23.cloudconvert.org/download/i7F82KLc",
         }).jPlayer("play");
       },
       supplied: "mp3"
@@ -37,6 +38,10 @@ Play.prototype = {
       type: 'GET',
       data: {url: this.player.jPlayer()[0].lastChild.src, vote: event.target.id}
     }).done(function(response){
+      if (response ==="end"){
+        console.log("We made it to the end!")
+        ////// DAN!!!! We need to get that partial in here to tell the user they've exhausted all their songs!
+      }
       console.log("**** INSIDE DONE OF PLAY NEXT SONG ****")
       console.log(response)
       this.player.jPlayer("setMedia", {

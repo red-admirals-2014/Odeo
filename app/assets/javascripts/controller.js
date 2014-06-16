@@ -25,8 +25,9 @@ Controller.prototype = {
     this.playView.unpauseSong();
   },
 
+
   triggerPlay: function(){
-    this.playView.playSong();
+    this.playView.initPlayer();
   },
   setProcessIdToSubmitForm: function(){
     $.ajax({
@@ -50,18 +51,11 @@ Controller.prototype = {
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
-    //
-    // $.ajax({
-    //   url: '/votes/create',
-    //   type: 'POST'
-    // }).done(function(response){
-    //   console.log("**** Voted!!! ****")
-    //   console.log(response)
-    // }.bind(this))
-
+    // debugger
     this.playView.playNextSong(event);
   }
 } //End controller prototype
+
 
 
 function returnDownloadLink(){
