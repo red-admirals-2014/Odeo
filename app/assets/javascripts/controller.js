@@ -15,8 +15,6 @@ Controller.prototype = {
      });
      $('#cassette').trigger('click');
      },
-
-
   openModal: function(){
     this.modalView.showModal();
     this.playView.pauseSong();
@@ -30,7 +28,25 @@ Controller.prototype = {
   triggerPlay: function(){
     this.playView.playSong();
   },
-
+  setProcessIdToSubmitForm: function(){
+    $.ajax({
+      url: '/cc_apikey',
+      type: 'GET'
+    }).done(function(key){
+      $.ajax({
+        url: 'https://api.cloudconvert.org/process',
+        type: 'POST',
+        data: {
+          apikey: key,
+          inputformat: 'wav',
+          outputformat: 'mp3'
+        }
+      }).done(function(response){
+        var upload_form_action = "https:" + response.url
+        $('#clip_upload').attr('action', upload_form_action)
+      })
+    })
+  },
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
