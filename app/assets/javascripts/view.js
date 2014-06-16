@@ -23,7 +23,7 @@ Play.prototype = {
     this.player.jPlayer({
       ready: function(){
         $(this).jPlayer("setMedia", {
-         mp3: "https://srv23.cloudconvert.org/download/hfJe5Xy9",
+         mp3: "https://srv23.cloudconvert.org/download/8Vjasw9P",
         });
       },
       supplied: "mp3"
