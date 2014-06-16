@@ -18,10 +18,7 @@
     font-size: 6em;
     font-family: 'Pacifico', cursive;
     color: #ff4052;
-    z-index: 100;
   }
-
-
   .login {
     margin: auto;
     position: absolute;
@@ -166,7 +163,6 @@
 
  #clip_upload input{
     margin: 10px;
-
     border: none;
     border-radius: 5px;
   }
@@ -210,7 +206,6 @@
   }
 
   .record{
-
     margin-right: 5px;
     margin-left: 5px;
     border: none;
