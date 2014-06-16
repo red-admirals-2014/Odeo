@@ -24,15 +24,9 @@ class ClipsController < ApplicationController
 
 
   def next
-    p "PARAMS IS ****" * 20
-    p params
     # next_song_really = Clip.find(next_song.clip_id).clip_link 
     clip = Clip.where(clip_link: params[:url]).first
-    p "CLIP IS *********"
-    p clip
     next_song = Clip.all.sample#.votes.where.not(user_id: 1).first
-    p "#" *20
-    p params[:url]
     if params[:vote] == 'upvote'
       vote = Vote.new(user_id: session[:user_id], clip_id: clip.id, like: true)
     else
