@@ -25,37 +25,14 @@ Controller.prototype = {
     this.modalView.closeModal();
   },
 
-  findNextSong: function(){
-    console.log("inside findNextSong")
-    var self = this
-    $.ajax({
-      url: '/clips/next',
-      type: 'GET',
-      data: {url: this.playView.player.jPlayer()[0].lastChild.src, vote: event.target.id}
-    }).done(function(response){
-      console.log("inside the response")
-      console.log(response)
-      self.playView.playSong(response)
-    })
-  },
 
   triggerPlay: function(){
-    // debugger
-    this.findNextSong()
-    // this.playView.playSong();
+    this.playView.initPlayer();
   },
 
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
-    //
-    // $.ajax({
-    //   url: '/votes/create',
-    //   type: 'POST'
-    // }).done(function(response){
-    //   console.log("**** Voted!!! ****")
-    //   console.log(response)
-    // }.bind(this))
 
     this.playView.playNextSong(event);
   }

@@ -19,32 +19,31 @@ function Play(){
 };
 
 Play.prototype = {
-  playSong: function(response){
-    debugger
+  initPlayer: function(response){
     console.log("**** INSIDE DONE OF PLAY SONG ****")
     this.player.jPlayer({
       ready: function(response){
          console.log('hi')
         $(this).jPlayer("setMedia", {
-         mp3: response,
+         mp3: 'https://srv22.cloudconvert.org/download/7dgpEHFn',
         }).jPlayer("play");
       },
       supplied: "mp3"
     });
   },
-  // playNextSong: function(event){
-  //   console.log('**** INSIDE PLAY NEXT SONG ****')
-  //   $.ajax({
-  //     url: '/clips/next',
-  //     type: 'GET',
-  //     data: {url: this.player.jPlayer()[0].lastChild.src, vote: event.target.id}
-  //   }).done(function(response){
-  //     console.log("**** INSIDE DONE OF PLAY NEXT SONG ****")
-  //     console.log(response)
-  //     this.player.jPlayer("setMedia", {
-  //       mp3: response
-  //     })
-  //     this.player.jPlayer("play")
-  //   }.bind(this))
-  // }
+  playNextSong: function(event){
+    console.log('**** INSIDE PLAY NEXT SONG ****')
+    $.ajax({
+      url: '/clips/next',
+      type: 'GET',
+      data: {url: this.player.jPlayer()[0].lastChild.src, vote: event.target.id}
+    }).done(function(response){
+      console.log("**** INSIDE DONE OF PLAY NEXT SONG ****")
+      console.log(response)
+      this.player.jPlayer("setMedia", {
+        mp3: response
+      })
+      this.player.jPlayer("play")
+    }.bind(this))
+  }
 };
