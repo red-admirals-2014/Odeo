@@ -1,41 +1,4 @@
 @media (max-width : 600px) {
-  #index-wrapper{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:0;
-    left:0;
-    bottom:0;
-    right:0;
-    margin: auto;
-    background-image: url('asiansinger.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  #index-wrapper h1{
-    margin-top: 110px;
-    text-align: center;
-    font-size: 5em;
-    font-family: 'Pacifico', cursive;
-    color: #ff4052;
-  }
-  .login {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    height: 50px;
-    width: 60%;
-    background-color: #3658d1;
-    border:none;
-    border-radius: 0.6em;
-  }
-
-  .login:hover {
-    background-color: #3a62ef;
-  }
 
   button{
     outline: 0;
@@ -43,33 +6,12 @@
     outline-width:0;
   }
 
-  .login a{
-    text-decoration: none;
-    font-size: 1em;
-    color: white;
-  }
-
   .icons{
     width:30px;
     height:30px;
   }
 
-  .navbar{
-    top:0;
-    width: 100%;
-    border-bottom: 1px solid #dddddd;
-  }
 
-  center{
-    padding-top: 25px;
-    padding-bottom: 25px;
-  }
-
-  .navbar a{
-    text-decoration: none;
-    /*margin-left: 85px;
-    margin-right: 85px;*/
-  }
 
   #brand{
     font-family: 'Pacifico', cursive;
