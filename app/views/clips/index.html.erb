@@ -1,8 +1,11 @@
-
+<div class="percent-wrapper">
+  <span class="rating"><%= @rating  %>%</span>
+</div>
 <div id="user_nav">
 
   <% if current_user %>
    <%= render 'nav' %>
+</div>
    <%= render 'player' %>
     <div class="modal media-center">
       <div class='clip-form media-center'>
@@ -16,5 +19,3 @@
         <%= render 'login' %>
       </div>
   <% end %>
-
-</div>
