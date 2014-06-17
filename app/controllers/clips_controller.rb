@@ -11,6 +11,7 @@ class ClipsController < ApplicationController
     else
       # CR Check your json object client side for error from cloudconvert and make sure to send that along so you can actually have a fail .- ie wrap your API calls in a MVC or MC
       puts "This failed"
+      redirect_to root_path
     end
   end
 

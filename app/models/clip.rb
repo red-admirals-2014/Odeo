@@ -1,6 +1,7 @@
 class Clip < ActiveRecord::Base
   belongs_to  :user
   has_many    :votes
+  validates   :clip_link, presence: true
 
   before_save :add_https
 
