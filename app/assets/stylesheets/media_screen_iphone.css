@@ -1,102 +1,24 @@
 @media (max-width : 600px) {
-
-  button{
-    outline: 0;
-    outline-style:none;
-    outline-width:0;
-  }
-
-  .icons{
-    width:30px;
-    height:30px;
-  }
-
-
-
-  #brand{
-    font-family: 'Pacifico', cursive;
-    color: #ff4052;
-    font-size: 3em;
-    margin-left: 25px;
-    margin-right: 25px;
-  }
-
-  .click-vote{
-    padding-bottom: 25px;
-    padding-top: 50px;
-    text-align: center;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-  }
-
-  .b-large{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: solid 15px #dddddd;
-    background-color: white;
-  }
-
-  .b-large:hover{
-    background-color: #f6f6f6
-  }
-
-  .b-med{
-    width: 75px;
-    height: 75px;
-    border: solid 15px #dddddd;
-    border-radius: 50%;
-    margin-left: -15px;
-    margin-right: -15px;
-    background-color: #ff4052;
-    color: white;
-    font-size: 2em;
-  }
-
-  .b-med:hover{
-    background-color: #f23b4a
-  }
-
-  img{
-    width: 40px;
-    height: 40px;
-  }
-
-  #mic{
-    width: 25px;
-    height: 25px;
-  }
-
-  .modal {
-    display: none;
-    width: 100%;
-    height: 100%;
-    position:absolute;
-    top: 0;
-    left: 0;
-    margin: auto;
-    background-color:rgba(0, 0, 0, 0.8);
-    padding:8px;
-    border: 1px solid #adadad
+.b-large{
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: solid 15px #adf3de;
+  background-color: white;
+  margin: 0 0 20px 0;
+}
+#mic{
+  width: 25px;
+  height: 25px;
+}
+#cassette{
+  height: 300px;
+  width: 300px;
 }
 
-  .clip-form{
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    background-color: white;
-    border-radius: 5px;
-  }
 
-  .modal-content{
-    text-align: center;
-  }
+
+
 
   #clip_upload input{
     margin: 2px;
@@ -105,43 +27,7 @@
     font-size: 12px;
   }
 
-  .close-new-clip{
-    background-color: #4bc757;
-    color: white;
-  }
 
-   .close-new-clip:hover{
-    background-color: #52d862;
-  }
-
-  #cassette{
-    height: 230px;
-    width: 230px;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    top: 0;
-    margin: auto;
-  }
-
-  .navbuts{
-    height:40px;
-    width:40px;
-    border-radius: 50%;
-    border: none;
-    background-color: white;
-  }
-
-
-  .navbuts:hover{
-      background-color: #f6f6f6;
-  }
-
-  #navlogo{
-      height:20px;
-      width:20px;
-  }
 
    .modal-content h2{
     font-family: 'Pacifico', cursive;
@@ -168,14 +54,4 @@
     background-color: #dedede;
   }
 
-  #cancel{
-    margin: 0;
-    background-color: #ff3c3d;
-    color: white;
-    width: 100px;
-    border: none;
-    border-radius: 2px;
-    font-size: 12px;
-  }
- /* End Media Query for iphone */
 }
