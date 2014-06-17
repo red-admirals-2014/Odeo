@@ -4,6 +4,7 @@ $(document).ready( initialize )
     omniauth
     var recordView = new Modal();
     var playView = new Play();
+    var noClip = new NoClips();
 
     var controller = new Controller(recordView, playView );
     controller.bindEventListener();

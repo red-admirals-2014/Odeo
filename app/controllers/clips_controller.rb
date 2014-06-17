@@ -48,7 +48,7 @@ class ClipsController < ApplicationController
       p next_song
       render :text => next_song.clip_link, layout: false
     else
-       potential_next_songs = Clip.where(created_at: (Time.now - 1.day)..Time.now + 1.day)
+      potential_next_songs = Clip.where(created_at: (Time.now - 1.day)..Time.now + 1.day)
       voted_on = potential_next_songs.includes(:votes).where('votes.user_id = ?', session[:user_id]).references(:votes)
       all_clips = Clip.all
       possible_songs = all_clips - voted_on

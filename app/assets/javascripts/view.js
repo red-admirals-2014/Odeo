@@ -12,6 +12,19 @@ Modal.prototype = {
   }
 };
 
+// End of Clips View
+function NoClips(){};
+
+NoClips.prototype = {
+  showNoClips: function(){
+    $('.modal .no-clips').fadeIn();
+  },
+
+  closeNoClips: function(){
+    $('.modal .no-clips').fadeOut();
+  }
+};
+
 
 // Play View
 function Play(){
@@ -40,6 +53,9 @@ Play.prototype = {
     }).done(function(response){
       if (response ==="end"){
         console.log("We made it to the end!")
+        this.pauseSong();
+        $('#noclips').trigger('click');
+        debugger
         ////// DAN!!!! We need to get that partial in here to tell the user they've exhausted all their songs!
       }
       console.log("**** INSIDE DONE OF PLAY NEXT SONG ****")

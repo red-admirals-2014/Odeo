@@ -1,12 +1,15 @@
-function Controller(modal, play, clip){
+function Controller(modal, play, noClip){
   this.modalView = modal
   this.playView = play
+  this.noClip = noClip
 }
 
 Controller.prototype = {
   bindEventListener: function(){
      $('.click-vote').on('click','.b-med', this.openModal.bind(this) );
      $('.close-new-clip').on('click', this.closeModal.bind(this) );
+     $('.close-no-clips').on('click', this.closeNoClips.bind(this) );
+     $('#noclips').on('click', this.showNoClips.bind(this) );
      $('#cassette').on('click', this.triggerPlay.bind(this) );
      $('.click-vote').on('click', '.vote-button', this.voteHandler.bind(this));
      $('#clip_upload').ajaxForm({
@@ -23,6 +26,14 @@ Controller.prototype = {
   closeModal: function(){
     this.modalView.closeModal();
     this.playView.unpauseSong();
+  },
+
+  closeNoClips: function(){
+    this.noClip.closeNoClips();
+  },
+
+  showNoClips: function() {
+    this.noClip.showNoClips();
   },
 
 

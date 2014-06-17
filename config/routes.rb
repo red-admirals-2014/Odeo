@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   root to: 'clips#index'
 
-  	resources :clips, only: [:create]
+  resources :clips, only: [:create]
   resources :users, only: [:index] do
   end
 
