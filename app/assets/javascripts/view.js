@@ -33,9 +33,19 @@ Play.prototype = {
   },
   playNextSong: function(event){
     console.log('**** INSIDE PLAY NEXT SONG ****')
+    //cast vote on song using ajax
+    $.ajax({
+      url: '/votes/create',
+      type: 'POST',
+      data: {
+        url: this.player.jPlayer()[0].lastChild.src,
+        vote: event.target.id
+      }
+    })
+    //play next song
     $.ajax({
       url: '/clips/next',
-      type: 'GET',
+      type: 'POST',
       data: {url: this.player.jPlayer()[0].lastChild.src, vote: event.target.id}
     }).done(function(response){
       if (response ==="end"){
