@@ -6,6 +6,8 @@ gem 'omniauth'
 gem 'omniauth-facebook', '1.4.0'
 gem 'httparty'
 
+
+
 # Use postgresql as the database for Active Record
 gem 'pg'
 # Use SCSS for stylesheets
@@ -33,8 +35,8 @@ gem 'spring',        group: :development
 
 
 group :development, :test  do
-  gem 'rspec-rails', '~> 2.14.0'
-  gem 'rspec-mocks', '~> 2.14.0'
+  gem 'rspec-rails'
+  gem 'rspec-mocks'
   gem 'factory_girl_rails', '~> 4.2.1'
 end
 
