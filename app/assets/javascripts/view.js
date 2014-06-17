@@ -12,6 +12,7 @@ Modal.prototype = {
   }
 };
 
+// CR put this in it's own file and call it Player (not playView)
 
 // Play View
 function Play(){

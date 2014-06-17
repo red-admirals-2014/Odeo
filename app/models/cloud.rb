@@ -1,3 +1,5 @@
+# CR move this to a JS model.
+
 class Cloud
   include HTTParty
 
