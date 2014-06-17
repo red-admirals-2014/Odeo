@@ -118,6 +118,7 @@ a{
   color: white;
 }
 .media-center{
+  position: absolute;
   margin: auto;
   width: 100%;
   height: 100%;
@@ -131,6 +132,7 @@ a{
   text-align: center;
   position: relative;
 }
+
 
 .rotate {
 
@@ -163,5 +165,4 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   position: absolute;
   top: 210px;
   right: 370px;
-
 }
