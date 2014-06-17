@@ -6,13 +6,13 @@ describe ClipsController do
   render_views
     it  "renders the login page for a new user" do
       get :index
-      expect(response.body).to have_content "Oudio Oudio Log in with Facebook"
+      expect(response.body).to have_content "Odeo Odeo Log in with Facebook"
     end
     it "renders the homepage for a user already logged in" do
       user = User.create
       session[:user_id] = 1
       get :index
-      expect(response.body).to have_content "Oudio Oudio logout Upload or Record Record Stop"
+      expect(response.body).to have_content "Odeo Odeo logout Like Nope Upload or Record Record Stop You are out of clips! Come back later for new clips!"
     end
   end
 

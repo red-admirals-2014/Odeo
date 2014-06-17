@@ -118,7 +118,6 @@ a{
   color: white;
 }
 .media-center{
-  position: absolute;
   margin: auto;
   width: 100%;
   height: 100%;
@@ -131,4 +130,38 @@ a{
 .jp-audio{
   text-align: center;
   position: relative;
+}
+
+.rotate {
+
+/* Safari */
+-webkit-transform: rotate(45deg);
+
+/* Firefox */
+-moz-transform: rotate(45deg);
+
+/* IE */
+-ms-transform: rotate(45deg);
+
+/* Opera */
+-o-transform: rotate(45deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+.like{
+  z-index: 100000;
+  background-color: rgba(255,255,255,0.4);
+  font-size: 5em;
+  padding: 5px 20px;
+  color: #5bd31a;
+  border-radius: 5px;
+  border: 6px solid;
+  display: inline-block;
+  position: absolute;
+  top: 210px;
+  right: 370px;
+
 }

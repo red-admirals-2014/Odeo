@@ -6,8 +6,9 @@ $(document).ready( initialize )
     var noClip = new noClips();
     var cloudApi = new CloudAPI();
     var playView = new Player();
+    var view = new View();
 
-    var controller = new Controller(recordView, playView,cloudApi, noClip);
+    var controller = new Controller(recordView, playView,cloudApi, view, noClip);
     controller.bindEventListener();
     controller.setProcessIdToSubmitForm();
 };

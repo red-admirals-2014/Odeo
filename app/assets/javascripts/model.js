@@ -4,15 +4,15 @@ function CloudAPI(){
 
 CloudAPI.prototype = {
   getKey: function(){
-    var singleLadies;
+    var apiKey;
     $.ajax({
       url: '/cc_apikey',
       type: 'GET',
       async: false
     }).done(function(key){
-      singleLadies = key;
+      apiKey = key;
     })
-    return singleLadies;
+    return apiKey;
   },
   getApiKey: function(){
     return this.apikey;

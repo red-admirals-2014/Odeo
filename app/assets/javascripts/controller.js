@@ -1,8 +1,10 @@
-function Controller(modal, play, cloudApi, noClip){
+function Controller(modal, play, cloudApi, view, noClip){
   this.modalView = modal;
   this.player = play;
   this.cloudApi = cloudApi;
-  this.noClip = noClip
+  this.view = view;
+  this.noClip = noClip;
+
 }
 
 Controller.prototype = {
@@ -56,13 +58,12 @@ Controller.prototype = {
       self.modalView.updateSubmitFormAction(upload_form_action);
     })
   },
-  voteHandler: function(event, data){
-    console.log("**** IN VOTE HANDLER ****");
-    console.log(event.target.id);
-    // debugger
+  voteHandler: function(event){
+    voteStatus = event.currentTarget.id
+    this.view.upVoteDownVote(voteStatus)
     this.player.playNextSong(event);
   }
-} //End controller prototype
+}
 
 
 
