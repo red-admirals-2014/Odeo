@@ -8,7 +8,7 @@ Player.prototype = {
     this.player.jPlayer({
       ready: function(response){
         $(this).jPlayer("setMedia", {
-         mp3: "https://srv23.cloudconvert.org/download/i7F82KLc",
+         mp3: "https://s3-us-west-1.amazonaws.com/akfoster/users/Music/01-03-+Dirt+and+Roses.mp3",
         }).jPlayer("play");
       },
       supplied: "mp3"
@@ -30,8 +30,8 @@ Player.prototype = {
       console.log("************ response *********")
       console.log(response)
       if (response === "end") {
-        this.pauseSong
-        $('.no-clips').trigger('click');
+        this.pauseSong;
+        $('#open-no-clips').trigger('click');
       }
       this.player.jPlayer("setMedia",{
         mp3: response

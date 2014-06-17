@@ -10,8 +10,7 @@ Controller.prototype = {
      $('.click-vote').on('click','.b-med', this.openModal.bind(this) );
      $('.close-new-clip').on('click', this.closeModal.bind(this) );
      $('.close-no-clips').on('click', this.closeNoClips.bind(this) );
-     debugger
-     $('.no-clips').on('click', this.showNoClips.bind(this) );
+     $('#open-no-clips').on('click', this.showNoClips.bind(this) );
      $('#cassette').on('click', this.triggerPlay.bind(this) );
      $('.click-vote').on('click', '.vote-button', this.voteHandler.bind(this));
      $('#clip_upload').ajaxForm({

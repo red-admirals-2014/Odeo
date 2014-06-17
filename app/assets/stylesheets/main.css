@@ -70,7 +70,7 @@ font-family: 'Vibur', cursive;
     background-color:rgba(0, 0, 0, 0.8);
     text-align: center;
 }
-.modal .clip-form{
+.modal .clip-form, .no-clips{
   width: 80%;
   height: 80%;
   background-color: white;
