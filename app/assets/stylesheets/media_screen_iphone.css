@@ -15,43 +15,9 @@
   height: 300px;
   width: 300px;
 }
-
-
-
-
-
-  #clip_upload input{
-    margin: 2px;
-    border: none;
-    border-radius: 2px;
-    font-size: 12px;
-  }
-
-
-
-   .modal-content h2{
-    font-family: 'Pacifico', cursive;
-    color: #ff3c3d;
-    }
-
-  .record{
-
-    margin-right: 5px;
-    margin-left: 5px;
-    border: none;
-    height:40px;
-    width:40px;
-    border-radius: 50%;
-    background-color: #ececec;
-  }
-
-  #record{
-    height: 15px;
-    width: 15px;
-  }
-
-  .record:hover{
-    background-color: #dedede;
-  }
-
+#clip_upload input{
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 2px;
+}
 }

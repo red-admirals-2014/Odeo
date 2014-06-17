@@ -1,21 +1,19 @@
 <div class="modal-content">
-  <h3>Upload or record from your phone!</h3>
-
+  <h1>Upload or Record</h1>
+  <%= image_tag 'delete30.svg', id: 'cancel', class: 'close-new-clip' %>
   <%= form_tag("", id: "clip_upload", :class => "#{current_user.id}", action: :upload, multipart: true, remote: true) do %>
     <%= hidden_field_tag 'input', 'upload' %>
     <%= hidden_field_tag 'outputformat', 'mp3' %>
     <%= file_field_tag 'file', accept: 'audio/*;capture=microphone', value: ' ', class: 'upload_choice'%>
-    <%= submit_tag "Submit", class: 'submit' %>
+    <%= submit_tag "Submit", class: 'submit close-new-clip' %>
   <% end %>
 
-  <h2>Or</h2>
-  <h3>Record yourself from the browser!</h3>
-  <button  class='record' onclick="startRecording(this);"><%= image_tag 'media.svg', id: 'record' %></button>
-  <button  class='record' onclick="stopRecording(this);" disabled><%= image_tag 'stop3.svg', id: 'record' %></button>
+
+
+  <button  class='record' onclick="startRecording(this);">Record</button>
+  <button  class='record' onclick="stopRecording(this);" disabled>Stop</button>
 
   <ul id="recordingslist"></ul>
   <pre id="log">
   </pre>
-
-  <%= image_tag 'delete30.svg', id: 'cancel', class: 'close-new-clip' %>
 </div>
