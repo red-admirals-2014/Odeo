@@ -9,6 +9,9 @@ Modal.prototype = {
 
   closeModal: function(){
     $('.modal').fadeOut();
+  },
+  updateSubmitFormAction: function(action_url){
+    $('#clip_upload').attr('action', action_url);
   }
 };
 

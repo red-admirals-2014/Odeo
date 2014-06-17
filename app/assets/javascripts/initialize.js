@@ -3,9 +3,10 @@ $(document).ready( initialize )
   function initialize(){
     omniauth
     var recordView = new Modal();
+    var cloudApi = new CloudAPI();
     var playView = new Play();
 
-    var controller = new Controller(recordView, playView );
+    var controller = new Controller(recordView, playView,cloudApi);
     controller.bindEventListener();
     controller.setProcessIdToSubmitForm();
 };

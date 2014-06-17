@@ -1,6 +1,7 @@
-function Controller(modal, play, clip){
-  this.modalView = modal
-  this.playView = play
+function Controller(modal, play, clip, cloudApi){
+  this.modalView = modal;
+  this.playView = play;
+  this.cloudApi = cloudApi;
 }
 
 Controller.prototype = {
@@ -31,21 +32,16 @@ Controller.prototype = {
   },
   setProcessIdToSubmitForm: function(){
     $.ajax({
-      url: '/cc_apikey',
-      type: 'GET'
-    }).done(function(key){
-      $.ajax({
-        url: 'https://api.cloudconvert.org/process',
-        type: 'POST',
-        data: {
-          apikey: key,
-          inputformat: 'wav',
-          outputformat: 'mp3'
-        }
-      }).done(function(response){
-        var upload_form_action = "https:" + response.url
-        $('#clip_upload').attr('action', upload_form_action)
-      })
+      url: 'https://api.cloudconvert.org/process',
+      type: 'POST',
+      data: {
+        apikey: this.cloudApi.getKey(),
+        inputformat: 'wav',
+        outputformat: 'mp3'
+      }
+    }).done(function(response){
+      var upload_form_action = "https:" + response.url;
+      this.modalView.updateSubmitFormAction(upload_form_action);
     })
   },
   voteHandler: function(event, data){
