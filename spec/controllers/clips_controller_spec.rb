@@ -12,7 +12,7 @@ describe ClipsController do
       user = User.create
       session[:user_id] = 1
       get :index
-      expect(response.body).to have_content "Oudio Oudio Upload or record from your phone! Or Record yourself from the browser! Cancel"
+      expect(response.body).to have_content "Oudio Oudio logout Upload or Record Record Stop"
     end
   end
 

@@ -1,6 +1,7 @@
-function Controller(modal, play, noClip){
-  this.modalView = modal
-  this.playView = play
+function Controller(modal, play, cloudApi, noClip){
+  this.modalView = modal;
+  this.player = play;
+  this.cloudApi = cloudApi;
   this.noClip = noClip
 }
 
@@ -20,12 +21,12 @@ Controller.prototype = {
      },
   openModal: function(){
     this.modalView.showModal();
-    this.playView.pauseSong();
+    this.player.pauseSong();
   },
 
   closeModal: function(){
     this.modalView.closeModal();
-    this.playView.unpauseSong();
+    this.player.unpauseSong();
   },
 
   closeNoClips: function(){
@@ -35,35 +36,31 @@ Controller.prototype = {
   showNoClips: function() {
     this.noClip.showNoClips();
   },
-
-
+  
   triggerPlay: function(){
-    this.playView.initPlayer();
+    this.player.initPlayer();
   },
   setProcessIdToSubmitForm: function(){
+    var key = this.cloudApi.getKey();
+    var self = this;
     $.ajax({
-      url: '/cc_apikey',
-      type: 'GET'
-    }).done(function(key){
-      $.ajax({
-        url: 'https://api.cloudconvert.org/process',
-        type: 'POST',
-        data: {
-          apikey: key,
-          inputformat: 'wav',
-          outputformat: 'mp3'
-        }
-      }).done(function(response){
-        var upload_form_action = "https:" + response.url
-        $('#clip_upload').attr('action', upload_form_action)
-      })
+      url: 'https://api.cloudconvert.org/process',
+      type: 'POST',
+      data: {
+        apikey: key,
+        inputformat: 'wav',
+        outputformat: 'mp3'
+      }
+    }).done(function(response){
+      var upload_form_action = "https:" + response.url;
+      self.modalView.updateSubmitFormAction(upload_form_action);
     })
   },
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
     // debugger
-    this.playView.playNextSong(event);
+    this.player.playNextSong(event);
   }
 } //End controller prototype
 
