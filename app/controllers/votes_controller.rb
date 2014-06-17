@@ -10,7 +10,7 @@ class VotesController < ApplicationController
       if user_vote == 'upvote'
         clip.votes.create(user_id: current_user.id, like: true)
       elsif user_vote == 'downvote'
-        clip.find_by_clip_link(params[:url]).votes.create(user_id: current_user.id, like: true)
+        clip.votes.create(user_id: current_user.id, like: false)
       else
         render :text => base_song_url, layout: false
       end
