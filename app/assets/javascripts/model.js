@@ -10,9 +10,7 @@ CloudAPI.prototype = {
       type: 'GET',
       async: false
     }).done(function(key){
-      console.log(key)
       apiKey = key;
-      console.log(apiKey)
     })
     return apiKey;
   },

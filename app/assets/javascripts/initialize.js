@@ -5,8 +5,9 @@ $(document).ready( initialize )
     var recordView = new Modal();
     var cloudApi = new CloudAPI();
     var playView = new Player();
+    var view = new View();
 
-    var controller = new Controller(recordView, playView,cloudApi);
+    var controller = new Controller(recordView, playView,cloudApi, view);
     controller.bindEventListener();
     controller.setProcessIdToSubmitForm();
 };

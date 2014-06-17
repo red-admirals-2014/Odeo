@@ -1,7 +1,19 @@
 // Modal View
 
-function View(){
+function View(){}
 
+View.prototype = {
+  upVoteDownVote: function(voteStatus){
+    if (voteStatus === "upvote"){
+      console.log("UPVOTED!")
+      // $('body').append('<h1>Win</h1>').clear()
+
+    }
+    else {
+      console.log("DOWNVOTED!!!")
+
+    }
+  }
 }
 
 function Modal(){};
