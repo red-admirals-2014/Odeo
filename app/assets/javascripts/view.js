@@ -1,6 +1,8 @@
 // Modal View
 
-function View(){}
+function View(){
+
+}
 
 View.prototype = {
   upVoteDownVote: function(voteStatus){

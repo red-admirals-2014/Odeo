@@ -43,20 +43,10 @@ Controller.prototype = {
     this.player.initPlayer();
   },
   setProcessIdToSubmitForm: function(){
-    var key = this.cloudApi.getKey();
-    var self = this;
-    $.ajax({
-      url: 'https://api.cloudconvert.org/process',
-      type: 'POST',
-      data: {
-        apikey: key,
-        inputformat: 'wav',
-        outputformat: 'mp3'
-      }
-    }).done(function(response){
-      var upload_form_action = "https:" + response.url;
-      self.modalView.updateSubmitFormAction(upload_form_action);
-    })
+    //get process id from cc api that returns the id
+    var apiKey = this.cloudApi.getKey();
+    var process_id = this.cloudApi.getNewProcess(apiKey);
+    this.modalView.updateSubmitFormAction(process_id);
   },
   voteHandler: function(event){
     voteStatus = event.currentTarget.id

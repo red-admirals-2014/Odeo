@@ -1,12 +1,13 @@
 function CloudAPI(){
-  this.apikey = this.getKey();
+  this.ccApiKeyRoute = '/cc_apikey';
+  this.ccProcessUrl = 'https://api.cloudconvert.org/process';
 }
 
 CloudAPI.prototype = {
   getKey: function(){
     var apiKey;
     $.ajax({
-      url: '/cc_apikey',
+      url: this.ccApiKeyRoute,
       type: 'GET',
       async: false
     }).done(function(key){
@@ -14,7 +15,21 @@ CloudAPI.prototype = {
     })
     return apiKey;
   },
-  getApiKey: function(){
-    return this.apikey;
+  getNewProcess: function(apiKey){
+    var process_url;
+    $.ajax({
+      url: this.ccProcessUrl,
+      type: 'POST',
+      data: {
+        apikey: apiKey,
+        inputformat: 'wav',
+        outputformat: 'mp3'
+      },
+      async: false
+    }).done(function(response){
+      process_url = "https:" + response.url;
+    })
+    return process_url;
   }
 }
+
