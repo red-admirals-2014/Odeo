@@ -3,6 +3,7 @@ $(document).ready( initialize )
   function initialize(){
     omniauth
     var recordView = new Modal();
+    var noClip = new noClips();
     var cloudApi = new CloudAPI();
     var playView = new Player();
     var view = new View();
