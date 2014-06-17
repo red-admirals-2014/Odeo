@@ -1,16 +1,13 @@
 
 <div class="navbar">
-<center>
-  <button class="navbuts"><%= link_to (image_tag 'percent1.svg', id:'navlogo'), signout_path, id: "rating" %></button>
-  <%= link_to 'Oudio', signout_path, id: "brand" %>
-  <button class="navbuts"><%= link_to (image_tag 'logout.svg', id:'navlogo'), signout_path, id: "sign_out" %></button>
-</center>
+  <h1>Oudio</h1>
+  <%= link_to 'logout', signout_path, id: "sign_out" %>
 </div>
 
 
 <div class="click-vote">
-  <button class="b-large vote-button" id="downvote"><%= image_tag "delete30.svg", id:'downvote' %></button>
-  <button class="b-med"><%= image_tag "microphone28.svg", id: 'mic' %></button>
-  <button class="b-large vote-button" id="upvote"><%= image_tag "check.svg", id:'upvote' %></button>
+  <%= image_tag "delete30.svg", id:'downvote',  class: "b-large vote-button" %>
+  <%= image_tag "microphone28.svg", id: 'mic',  class: 'b-med'%>
+  <%= image_tag "check.svg", id:'upvote',       class: "b-large vote-button" %>
 </div>
 
