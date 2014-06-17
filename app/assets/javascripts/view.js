@@ -14,7 +14,6 @@ Modal.prototype = {
 
   closeModal: function(){
     $('.modal').fadeOut();
-    $(".no-clips").show();
   },
 
   updateSubmitFormAction: function(action_url){
@@ -28,6 +27,7 @@ function noClips(){};
 
 noClips.prototype = {
   showNoClips: function(){
+    $(".no-clips").show();
     $('.modal').fadeIn();
     $(".clip-form").hide();
   },

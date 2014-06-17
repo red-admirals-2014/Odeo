@@ -10,7 +10,6 @@
     var input = audio_context.createMediaStreamSource(stream);
 
     input.connect(audio_context.destination);
-
     recorder = new Recorder(input);
     __log('Recorder initialised.');
   }
@@ -65,6 +64,6 @@
       alert('No web audio support in this browser!');
     }
 
-    navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
-    });
+    // navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+    // });
   };
