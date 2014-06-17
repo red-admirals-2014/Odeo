@@ -8,14 +8,13 @@ rvm:
 env:
 - DB=postgresql
 
-
- before_script:
+before_script:
   - psql -c 'create database stage_fright_test' -U postgres
-   - bundle exec rake db:migrate
-   - bundle exec rake db:test:prepare
+  - bundle exec rake db:migrate
+  - bundle exec rake db:test:prepare
 
-  script:
-    - bundle exec rake db:test:prepare
+script:
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
 
-
-
+# bundler_args: --binstubs=./bundler_stubs
