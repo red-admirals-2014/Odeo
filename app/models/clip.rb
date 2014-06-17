@@ -14,9 +14,10 @@ class Clip < ActiveRecord::Base
     else
       potential_next_songs = self.where(created_at: (Time.now - 1.day)..Time.now + 1.day)
       voted_on = potential_next_songs.includes(:votes).where('votes.user_id = ?', user.id).references(:votes)
-      clip_link = (self.all - voted_on).sample.clip_link
-      if clip_link
-        clip_link
+      puts "*************"
+      clip_link = (self.all - voted_on)
+      if clip_link.length > 0
+        clip_link.sample.clip_link
       else
         "end"
       end

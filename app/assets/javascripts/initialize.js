@@ -4,7 +4,7 @@ $(document).ready( initialize )
     omniauth
     var recordView = new Modal();
     var cloudApi = new CloudAPI();
-    var playView = new Play();
+    var playView = new Player();
 
     var controller = new Controller(recordView, playView,cloudApi);
     controller.bindEventListener();

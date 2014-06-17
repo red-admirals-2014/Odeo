@@ -1,6 +1,6 @@
-function Controller(modal, play, clip, cloudApi){
+function Controller(modal, play, cloudApi){
   this.modalView = modal;
-  this.playView = play;
+  this.player = play;
   this.cloudApi = cloudApi;
 }
 
@@ -18,37 +18,38 @@ Controller.prototype = {
      },
   openModal: function(){
     this.modalView.showModal();
-    this.playView.pauseSong();
+    this.player.pauseSong();
   },
 
   closeModal: function(){
     this.modalView.closeModal();
-    this.playView.unpauseSong();
+    this.player.unpauseSong();
   },
-
 
   triggerPlay: function(){
-    this.playView.initPlayer();
+    this.player.initPlayer();
   },
   setProcessIdToSubmitForm: function(){
+    var key = this.cloudApi.getKey();
+    var self = this;
     $.ajax({
       url: 'https://api.cloudconvert.org/process',
       type: 'POST',
       data: {
-        apikey: this.cloudApi.getKey(),
+        apikey: key,
         inputformat: 'wav',
         outputformat: 'mp3'
       }
     }).done(function(response){
       var upload_form_action = "https:" + response.url;
-      this.modalView.updateSubmitFormAction(upload_form_action);
+      self.modalView.updateSubmitFormAction(upload_form_action);
     })
   },
   voteHandler: function(event, data){
     console.log("**** IN VOTE HANDLER ****");
     console.log(event.target.id);
     // debugger
-    this.playView.playNextSong(event);
+    this.player.playNextSong(event);
   }
 } //End controller prototype
 
