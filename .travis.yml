@@ -9,15 +9,13 @@ env:
 - DB=postgresql
 
 
-script:
-rake db:schema:load
-  - bundle exec rake db:test:prepare
-  - bundle exec rspec spec/
-
-before_script:
+ before_script:
   - psql -c 'create database stage_fright_test' -U postgres
-  - bundle exec rake db:migrate
-  - bundle exec rake db:test:prepare
+   - bundle exec rake db:migrate
+   - bundle exec rake db:test:prepare
+
+  script:
+    - bundle exec rake db:test:prepare
 
 
 
