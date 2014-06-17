@@ -22,11 +22,13 @@ Player.prototype = {
         url: this.player.jPlayer()[0].lastChild.src,
         vote: event.target.id
       }
-    })
+    });
     $.ajax({
       url: '/clips/next',
       type: 'GET',
     }).done(function(response){
+      console.log("************ response *********")
+      console.log(response)
       this.player.jPlayer("setMedia",{
         mp3: response
       }).jPlayer("play")
