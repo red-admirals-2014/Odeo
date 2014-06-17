@@ -1,4 +1,10 @@
 @media (min-width: 600px) {
+.navbar h1{
+  margin: 5px 0;
+  font-family: 'Pacifico', cursive;
+  color: #ff4052;
+  font-size: 4em;
+}
 .b-large{
   width: 150px;
   height: 150px;
