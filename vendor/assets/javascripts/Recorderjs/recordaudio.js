@@ -8,9 +8,9 @@
 
   function startUserMedia(stream) {
     var input = audio_context.createMediaStreamSource(stream);
-    
+
     input.connect(audio_context.destination);
-    
+
     recorder = new Recorder(input);
     __log('Recorder initialised.');
   }
@@ -38,7 +38,7 @@
       var li = document.createElement('li');
       var au = document.createElement('audio');
       var hf = document.createElement('a');
-      
+
       au.src = url;
       hf.href = url;
       hf.download = new Date().toISOString() + '.wav';
@@ -59,12 +59,12 @@
                        navigator.mozGetUserMedia ||
                        navigator.msGetUserMedia);
       window.URL = window.URL || window.webkitURL;
-      
+
       audio_context = new AudioContext;
     } catch (e) {
       alert('No web audio support in this browser!');
     }
-    
+
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     });
   };
