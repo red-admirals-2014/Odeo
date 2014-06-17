@@ -27,3 +27,34 @@
   border-radius: 2px;
 }
 }
+
+@media (max-width : 600px) and ( max-height: 455px ) {
+.b-large{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: solid 10px #adf3de;
+  background-color: white;
+  margin: 0 0 20px 0;
+}
+.b-med{
+  background-color: #ff1828;
+  border-radius: 50%;
+  border: solid 5px #e51624;
+  margin: 0 0 40px 0;
+}
+#mic{
+  width: 20px;
+  height: 20px;
+}
+#cassette{
+  margin-top: 130px;
+  height: 200px;
+  width: 200px;
+}
+#clip_upload input{
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 2px;
+}
+}
