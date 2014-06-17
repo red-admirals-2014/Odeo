@@ -12,7 +12,7 @@ describe ClipsController do
       user = User.create
       session[:user_id] = 1
       get :index
-      expect(response.body).to have_content "Odeo Odeo logout Upload or Record Record Stop You are out of clips! Come back later for new clips!"
+      expect(response.body).to have_content "Odeo Odeo logout Like Nope Upload or Record Record Stop You are out of clips! Come back later for new clips!"
     end
   end
 
