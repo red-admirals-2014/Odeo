@@ -29,6 +29,10 @@ Player.prototype = {
     }).done(function(response){
       console.log("************ response *********")
       console.log(response)
+      if (response === "end") {
+        this.pauseSong
+        $('.no-clips').trigger('click');
+      }
       this.player.jPlayer("setMedia",{
         mp3: response
       }).jPlayer("play")
