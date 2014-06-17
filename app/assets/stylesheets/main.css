@@ -38,12 +38,6 @@ font-family: 'Vibur', cursive;
   right: 0;
   text-align: center;
 }
-.navbar h1{
-  margin: 5px 0;
-  font-family: 'Pacifico', cursive;
-  color: #ff4052;
-  font-size: 4em;
-}
 #sign_out{
   padding: 5px 25px;
   border-radius: 5px;
@@ -63,12 +57,6 @@ font-family: 'Vibur', cursive;
   bottom: 0;
   left: 0;
   right: 0;
-}
-.b-med{
-  background-color: #ff1828;
-  border-radius: 50%;
-  border: solid 5px #e51624;
-  margin: 0 0 80px 0;
 }
 .b-med:hover{
   background-color: #e51624
