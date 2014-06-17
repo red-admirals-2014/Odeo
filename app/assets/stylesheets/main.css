@@ -129,3 +129,37 @@ a{
   text-align: center;
 }
 
+.rotate {
+
+/* Safari */
+-webkit-transform: rotate(45deg);
+
+/* Firefox */
+-moz-transform: rotate(45deg);
+
+/* IE */
+-ms-transform: rotate(45deg);
+
+/* Opera */
+-o-transform: rotate(45deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+.like{
+  z-index: 100000;
+  background-color: rgba(255,255,255,0.4);
+  font-size: 5em;
+  padding: 5px 20px;
+  color: #5bd31a;
+  border-radius: 5px;
+  border: 6px solid;
+  display: inline-block;
+  position: absolute;
+  top: 210px;
+  right: 370px;
+  font-family:
+
+}
