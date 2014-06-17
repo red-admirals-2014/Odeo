@@ -1,8 +1,9 @@
-function Controller(modal, play, cloudApi, view){
+function Controller(modal, play, cloudApi, view, noClip){
   this.modalView = modal;
   this.player = play;
   this.cloudApi = cloudApi;
   this.view = view;
+  this.noClip = noClip;
 
 }
 
