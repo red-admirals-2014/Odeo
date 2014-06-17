@@ -15,6 +15,8 @@ Controller.prototype = {
      $('#open-no-clips').on('click', this.showNoClips.bind(this) );
      $('#cassette').on('click', this.triggerPlay.bind(this) );
      $('.click-vote').on('click', '.vote-button', this.voteHandler.bind(this));
+     $('#jp_container_1').on('swipeleft', this.voteHandler.bind(this))
+     $('#jp_container_1').on('swiperight', this.voteHandler.bind(this))
      $('#clip_upload').ajaxForm({
         success: returnDownloadLink,
         error: errorUploadingClip
@@ -59,7 +61,16 @@ Controller.prototype = {
     })
   },
   voteHandler: function(event){
+    if (event.type === "swipeleft") {
+      voteStatus = "downvote"
+    }
+    else if (event.type === "swiperight") {
+      voteStatus = "upvote"
+    }
+    else {
     voteStatus = event.currentTarget.id
+    }
+    console.log(voteStatus)
     this.view.upVoteDownVote(voteStatus)
     this.player.playNextSong(event);
   }
