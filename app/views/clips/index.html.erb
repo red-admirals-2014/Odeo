@@ -4,13 +4,14 @@
   <% if current_user %>
    <%= render 'nav' %>
    <%= render 'player' %>
-      <div class="modal">
-        <div class='clip-form'>
-            <%= render 'clips/new_clip' %>
-        </div>
+    <div class="modal media-center">
+      <div class='clip-form media-center'>
+        <%= render 'clips/new_clip' %>
       </div>
+    </div>
+
   <% else %>
-      <div id='index-wrapper'>
+      <div class='landing media-center'>
         <h1>Oudio</h1>
         <%= render 'login' %>
       </div>
