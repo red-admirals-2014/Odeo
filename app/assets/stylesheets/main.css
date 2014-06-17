@@ -118,6 +118,7 @@ a{
   color: white;
 }
 .media-center{
+  position: absolute;
   margin: auto;
   width: 100%;
   height: 100%;
