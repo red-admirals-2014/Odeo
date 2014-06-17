@@ -16,29 +16,20 @@ describe ClipsController do
     end
   end
 
-  describe "POST create" do
-    context "with valid attributes" do
-      it "saves new clip to the database" do
-        # pending
-        # new_user = User.create
-        # session[:user_id] = new_user.id
-        # expect{
-        #   post :create, new_user
-        # }.to change(Clip, :count).by(1)
+  describe "#create" do
+      it "redirects to root_path upon successfull save" do
+        @user = User.create
+        session[:user_id] = @user.id
+        post :create, {url: "tommy.com"}
+        expect(response).to be_redirect
       end
-      it "redirects to root_path" do
-        pending
-        # new_user = FactoryGirl.create(:user)
-        # session[:user_id] = new_user.id
-        # post :create, FactoryGirl.attributes_for(:clip)
-        # expect(response).to redirect_to root_path
+      it "puts this failed when not succesfull" do
+        # This is a useless test because no matter what, the response is a redirect.
+        @user = User.create
+        session[:user_id] = @user.id
+        post :create
+        expect(response).to be_redirect
       end
     end
 
-    context "with invalid attributes" do
-      it "does not save the new clip to the database" do
-        pending "adding a validation to Clip model for clip_link presence gives an expectation to have views to render for no apparent reason"
-      end
-    end
-  end
 end

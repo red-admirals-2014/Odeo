@@ -4,9 +4,6 @@ class ClipsController < ApplicationController
   def index
   end
 
-  def new
-
-  end
 
   def create
     user = User.find(session[:user_id])
@@ -16,6 +13,7 @@ class ClipsController < ApplicationController
       redirect_to root_path
     else
       puts "This failed"
+      redirect_to root_path
     end
   end
 
