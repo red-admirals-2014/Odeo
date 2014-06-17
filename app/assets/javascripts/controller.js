@@ -1,13 +1,16 @@
-function Controller(modal, play, cloudApi){
+function Controller(modal, play, cloudApi, noClip){
   this.modalView = modal;
   this.player = play;
   this.cloudApi = cloudApi;
+  this.noClip = noClip
 }
 
 Controller.prototype = {
   bindEventListener: function(){
      $('.click-vote').on('click','.b-med', this.openModal.bind(this) );
      $('.close-new-clip').on('click', this.closeModal.bind(this) );
+     $('.close-no-clips').on('click', this.closeNoClips.bind(this) );
+     $('#open-no-clips').on('click', this.showNoClips.bind(this) );
      $('#cassette').on('click', this.triggerPlay.bind(this) );
      $('.click-vote').on('click', '.vote-button', this.voteHandler.bind(this));
      $('#clip_upload').ajaxForm({
@@ -24,6 +27,14 @@ Controller.prototype = {
   closeModal: function(){
     this.modalView.closeModal();
     this.player.unpauseSong();
+  },
+
+  closeNoClips: function(){
+    this.noClip.closeNoClips();
+  },
+
+  showNoClips: function() {
+    this.noClip.showNoClips();
   },
 
   triggerPlay: function(){
