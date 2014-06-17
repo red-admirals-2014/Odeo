@@ -10,6 +10,8 @@ Modal.prototype = {
   showModal: function(){
     $('.modal').fadeIn();
     $(".no-clips").hide();
+    navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+    });
   },
 
   closeModal: function(){
