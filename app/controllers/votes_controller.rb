@@ -5,14 +5,8 @@ class VotesController < ApplicationController
     base_song_url = "https://srv23.cloudconvert.org/download/i7F82KLc"
     user_vote = params[:vote]
 
-    puts "************* VOTE CREATE ****************"
-    puts user_vote
-    puts base_song_url
-    puts song_url
-
     if song_url != base_song_url
       clip = Clip.find_by_clip_link(song_url)
-      puts clip.inspect
       if user_vote == 'upvote'
         clip.votes.create(user_id: current_user.id, like: true)
       elsif user_vote == 'downvote'
