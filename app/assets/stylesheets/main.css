@@ -1,10 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Grand+Hotel|Pacifico|Vibur);
 
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
 /*
 font-family: 'Grand Hotel', cursive;
 font-family: 'Pacifico', cursive;
 font-family: 'Vibur', cursive;
 */
+
 
 
 /* Login  */
@@ -41,18 +44,31 @@ font-family: 'Vibur', cursive;
   text-align: center;
 }
 
+.navbar ul{
+  margin: 0;
+  padding: 0
+}
 
-#sign_out{
-  padding: 5px 25px;
-  border-radius: 5px;
-  color: #2d4bbd;
-  border: 3px solid #2d4bbd;
+.navbar li{
+  display: inline-block;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  margin:  0px 20px;
 }
-#sign_out:hover{
-  background-color: #f9f9f9;
-  color: #3a66ff;
-  border: 3px solid #3a66ff;
+a {
+  text-decoration: none;
+  color: #9b9c99;
+  padding-bottom: 5px;
 }
+
+.navbar a:visited {
+  color: #9b9c99;
+}
+
+.navbar a:hover{
+  border-bottom: 1px solid #9b9c99;
+}
+
 
 /* Footer */
 .click-vote{
