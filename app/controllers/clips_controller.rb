@@ -2,7 +2,7 @@
 class ClipsController < ApplicationController
   def index
     if current_user
-      # @rating = current_user.percent_rating
+      @rating = current_user.percent_rating
     end
   end
 
