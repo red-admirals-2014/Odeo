@@ -6,11 +6,15 @@ View.prototype = {
   upVoteDownVote: function(voteStatus){
     if (voteStatus === "upvote"){
       console.log("UPVOTED!")
+      $(".like").fadeIn("fast")
+      $(".like").fadeOut("fast")
       // $('body').append('<h1>Win</h1>').clear()
 
     }
     else {
       console.log("DOWNVOTED!!!")
+      $(".nope").fadeIn("fast")
+      $(".nope").fadeOut("fast")
 
     }
   }

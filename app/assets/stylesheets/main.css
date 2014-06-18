@@ -184,29 +184,32 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .like{
-  text-align: center;
+  display: none;
   z-index: 100000;
   background-color: rgba(255,255,255,0.4);
+  font-family: sans-serif;
+  font-weight: 100;
   font-size: 5em;
   padding: 3px 39px;
   color: #84d359;
   border-radius: 5px;
   border: 6px solid;
-  display: inline-block;
   position: absolute;
   top: 25%;
   right: 25%;
 }
 
 .nope{
+  display: none;
   z-index: 100000;
   background-color: rgba(255,255,255,0.4);
   font-size: 5em;
+  font-family: sans-serif;
+  font-weight: 100;
   padding: 3px 10px;
   color: #d34141;
   border-radius: 5px;
   border: 6px solid;
-  display: inline-block;
   position: absolute;
   top: 25%;
   left: 25%;
