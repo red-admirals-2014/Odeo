@@ -12,5 +12,16 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
-  
+
+  def percent_rating
+    num_clips_with_votes = (Clip.joins(:votes).where('clips.user_id = ?', self.id).count).to_f
+    num_clips_liked = Clip.joins(:votes).where('clips.user_id = ? AND votes.like = true', self.id).count
+    if num_clips_liked != 0
+      rating = (num_clips_liked / num_clips_with_votes) * 100
+      rating.to_i
+    else
+      0
+    end
+  end
+
 end

@@ -1,36 +1,37 @@
 @media (min-width: 600px) {
-.navbar h1{
-  margin: 5px 0;
-  font-family: 'Pacifico', cursive;
-  color: #ff4052;
-  font-size: 4em;
-}
-.b-large{
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: solid 15px #adf3de;
-  background-color: white;
-  margin: 0 0 20px 0;
-}
-.b-med{
-  background-color: #ff1828;
-  border-radius: 50%;
-  border: solid 5px #e51624;
-  margin: 0 0 80px 0;
-}
-#mic{
-  width: 40px;
-  height: 40px;
-}
-#cassette{
-  height: 500px;
-  width: 500px;
-}
-#clip_upload input{
-  background-color: #f0f0f0;
-  border: none;
-  border-radius: 2px;
+  .navbar h1{
+    margin: 5px 0;
+    font-family: 'Pacifico', cursive;
+    color: #ff4052;
+    font-size: 4em;
+  }
+  .b-large{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: solid 15px #adf3de;
+    background-color: white;
+    margin: 0 0 20px 0;
+  }
+  .b-med{
+    background-color: #ff1828;
+    border-radius: 50%;
+    border: solid 5px #e51624;
+    margin: 0 0 80px 0;
+  }
+  #mic{
+    width: 40px;
+    height: 40px;
+  }
+  #cassette{
+    height: 500px;
+    width: 500px;
+  }
+  #clip_upload input{
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 2px;
+  }
 }
 
 /*.recording {
@@ -40,4 +41,3 @@
 /*.mobile-recording{
   visibility: visible;
 }*/
-} /* End Media Query for 600px */
