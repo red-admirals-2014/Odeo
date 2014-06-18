@@ -55,16 +55,16 @@ font-family: 'Vibur', cursive;
 }
 a {
   text-decoration: none;
-  color: #9b9c99;
+  color: black;
   padding-bottom: 5px;
 }
 
 .navbar a:visited {
-  color: #9b9c99;
+  color: black
 }
 
 .navbar a:hover{
-  border-bottom: 1px solid #9b9c99;
+  border-bottom: 1px solid black
 }
 
 
