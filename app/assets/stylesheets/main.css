@@ -6,6 +6,7 @@ font-family: 'Pacifico', cursive;
 font-family: 'Vibur', cursive;
 */
 
+
 /* Login  */
 .landing h1{
   margin: 60px;
@@ -31,6 +32,7 @@ font-family: 'Vibur', cursive;
 }
 
 /* Navbar */
+
 .navbar{
   position: relative;
   top: 0;
@@ -38,6 +40,8 @@ font-family: 'Vibur', cursive;
   right: 0;
   text-align: center;
 }
+
+
 #sign_out{
   padding: 5px 25px;
   border-radius: 5px;
@@ -144,6 +148,17 @@ a{
   position: relative;
 }
 
+.percent-wrapper{
+  position: absolute;
+  overflow: hidden;
+  font-size: 3em;
+  left: 250px;
+}
+.rating {
+  text-align: center;
+  position: relative;
+}
+
 .upload-success{
   color: #52a542;
   display: none;
@@ -156,6 +171,7 @@ a{
   color: #4183ea;
   display: none;
 }
+
 
 .rotatelike {
 
@@ -223,12 +239,5 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   left: 25%;
 }
 
-.rating {
-  display: inline-block;
-  position: absolute;
-  font-size: 2.4em;
-  top: 50px;
-  left: 720px;
-}
 
 
