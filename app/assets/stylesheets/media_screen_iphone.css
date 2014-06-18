@@ -66,4 +66,33 @@
   border: none;
   border-radius: 2px;
 }
+
+.like{
+  text-align: center;
+  z-index: 100000;
+  background-color: rgba(255,255,255,0.4);
+  font-size: 2em;
+  padding: 3px 22px;
+  color: #84d359;
+  border-radius: 5px;
+  border: 6px solid;
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  right: 25%;
+}
+
+.nope{
+  z-index: 100000;
+  background-color: rgba(255,255,255,0.4);
+  font-size: 2em;
+  padding: 3px 10px;
+  color: #d34141;
+  border-radius: 5px;
+  border: 6px solid;
+  display: inline-block;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
 }
