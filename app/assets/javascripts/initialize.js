@@ -10,7 +10,23 @@ $(document).ready( initialize )
 
     var controller = new Controller(recordView, playView,cloudApi, view, noClip);
     controller.bindEventListener();
+
+
+    setInterval(pollUserRating(), 3000 )
+
+
 };
+
+function pollUserRating(){
+  var userRating = $('.percent-wrapper .rating')[0];
+  $.ajax({
+    url: "server",
+    success: function(data){
+      userRating.innerHTML= data.value + "%"
+    }
+  })
+
+}
 
 function omniauth(){
  $('body').prepend('<div id="fb-root"></div>');

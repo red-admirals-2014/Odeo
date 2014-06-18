@@ -2,7 +2,7 @@
 class ClipsController < ApplicationController
   def index
     if current_user
-      @rating = current_user.percent_rating
+      # @rating = current_user.percent_rating
     end
   end
 
@@ -27,4 +27,9 @@ class ClipsController < ApplicationController
     end
   end
 
+  def server
+    @rating = current_user.percent_rating
+    @rating = { value: @rating }
+    render :json => @rating, layout: false
+  end
 end
