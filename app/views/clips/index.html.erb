@@ -2,11 +2,9 @@
 <div id="user_nav">
 
   <% if current_user %>
-
     <%= render 'nav' %>
     <%= render 'player' %>
     <%= render 'footer' %>
-
     <div class="modal media-center">
       <div class='clip-form media-center'>
         <%= render 'clips/new_clip' %>
@@ -23,7 +21,4 @@
       </div>
   <% end %>
 </div>
-
-
-
 

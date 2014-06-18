@@ -1,6 +1,9 @@
 
 class ClipsController < ApplicationController
   def index
+    if current_user
+      # @rating = current_user.percent_rating
+    end
   end
 
   def create
@@ -16,6 +19,7 @@ class ClipsController < ApplicationController
   end
 
   def next
+    puts "I HIT THE ROUTE"
     next_clip_link = Clip.get_next_clip(current_user, params[:url])
     if next_clip_link == "end"
       render :text => "end", layout: false
@@ -24,4 +28,9 @@ class ClipsController < ApplicationController
     end
   end
 
+  def server
+    @rating = current_user.percent_rating
+    @rating = { value: @rating }
+    render :json => @rating, layout: false
+  end
 end

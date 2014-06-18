@@ -91,5 +91,3 @@ function insertIntoDatabase(returnedURL){
     data: {url: returnedURL}
   }).success(displayInfo)
 };
-
-function displayInfo(data){};

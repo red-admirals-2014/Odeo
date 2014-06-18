@@ -28,6 +28,7 @@ Player.prototype = {
       type: 'GET',
     }).done(function(response){
       if (response === "end") {
+        console.log("WE MADE IT!")
         this.pauseSong;
         $('#open-no-clips').trigger('click');
       }
