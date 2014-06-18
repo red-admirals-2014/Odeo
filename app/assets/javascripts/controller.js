@@ -9,24 +9,25 @@ function Controller(modal, play, cloudApi, view, noClip){
 
 Controller.prototype = {
   bindEventListener: function(){
-     $('.click-vote').on('click','.b-med', this.openModal.bind(this) );
-     $('.close-new-clip').on('click', this.closeModal.bind(this) );
-     $('.close-no-clips').on('click', this.closeNoClips.bind(this) );
-     $('#open-no-clips').on('click', this.showNoClips.bind(this) );
-     $('.submit').on('click', this.showPending.bind(this) );
-     $('#cassette').on('click', this.triggerPlay.bind(this) );
-     $('.click-vote').on('click', '.vote-button', this.voteHandler.bind(this));
-     $('#jp_container_1').on('swipeleft', this.voteHandler.bind(this))
-     $('#jp_container_1').on('swiperight', this.voteHandler.bind(this))
-     $('#clip_upload').ajaxForm({
+     $(this.view.micButton).on('click', this.openModal.bind(this) );
+     $(this.view.closeNewClipModal).on('click', this.closeModal.bind(this) );
+     $(this.view.closeNoClipsModal).on('click', this.closeNoClips.bind(this) );
+     $(this.view.openNoClipsModal).on('click', this.showNoClips.bind(this) );
+     $(this.view.cassette).on('click', this.triggerPlay.bind(this) );
+     $(this.view.voteButtons).on('click', this.voteHandler.bind(this));
+     $(this.view.clipUpload).ajaxForm({
         success: returnDownloadLink,
         error: errorUploadingClip
      });
-     $('#cassette').trigger('click');
-     },
+     $('#jp_container_1').on('swipeleft', this.voteHandler.bind(this))
+     $('#jp_container_1').on('swiperight', this.voteHandler.bind(this))
+     $('.submit').on('click', this.showPending.bind(this) );
+     $(this.view.cassette).trigger('click');
+  },
   openModal: function(){
     this.modalView.showModal();
     this.player.pauseSong();
+    this.setProcessIdToSubmitForm();
   },
 
   closeModal: function(){
@@ -46,22 +47,9 @@ Controller.prototype = {
     this.player.initPlayer();
   },
   setProcessIdToSubmitForm: function(){
-    var key = this.cloudApi.getKey();
-    var self = this;
-    $.ajax({
-      url: 'https://api.cloudconvert.org/process',
-      type: 'POST',
-      data: {
-        apikey: key,
-        inputformat: 'wav',
-        outputformat: 'mp3'
-      }
-    }).done(function(response){
-      var upload_form_action = "https:" + response.url;
-      self.modalView.updateSubmitFormAction(upload_form_action);
-
-      // Uploaded at Cloud Converter... Msg:
-    })
+    var apiKey = this.cloudApi.getKey();
+    var process_id = this.cloudApi.getNewProcess(apiKey);
+    this.modalView.updateSubmitFormAction(process_id);
   },
   voteHandler: function(event){
     if (event.type === "swipeleft") {
@@ -73,7 +61,6 @@ Controller.prototype = {
     else {
     voteStatus = event.currentTarget.id
     }
-    console.log(voteStatus)
     this.view.upVoteDownVote(voteStatus)
     this.player.playNextSong(event);
   },
@@ -82,8 +69,6 @@ Controller.prototype = {
     this.view.displayPendingUpload();
   }
 };
-
-
 
 function returnDownloadLink(){
   $('.upload-pending').fadeOut();
@@ -95,7 +80,6 @@ function returnDownloadLink(){
 };
 
 function errorUploadingClip(){
-  console.log("Yikes, we can't upload that!")
   $('.upload-pending').fadeOut()
   $('.upload-error').fadeIn()
 };

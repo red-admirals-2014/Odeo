@@ -27,8 +27,6 @@ Player.prototype = {
       url: '/clips/next',
       type: 'GET',
     }).done(function(response){
-      console.log("************ response *********")
-      console.log(response)
       if (response === "end") {
         this.pauseSong;
         $('#open-no-clips').trigger('click');
