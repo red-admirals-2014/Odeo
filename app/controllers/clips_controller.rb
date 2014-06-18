@@ -1,9 +1,9 @@
 
 class ClipsController < ApplicationController
   def index
-    @rating = current_user.percent_rating
-    puts "************ RATING "
-    puts @rating
+    if current_user
+      @rating = current_user.percent_rating
+    end
   end
 
   def create
