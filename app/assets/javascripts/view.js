@@ -11,8 +11,11 @@ View.prototype = {
     }
     else {
       console.log("DOWNVOTED!!!")
-
     }
+  },
+
+  displayPendingUpload: function(){
+    $('.upload-pending').fadeIn(300)
   }
 }
 
@@ -20,12 +23,14 @@ function Modal(){};
 
 Modal.prototype = {
   showModal: function(){
-    $('.modal').fadeIn();
+    $('.modal').fadeIn(300);
     $(".no-clips").hide();
   },
 
   closeModal: function(){
-    $('.modal').fadeOut();
+    $('.modal').fadeOut(300);
+    $('.upload-success').fadeOut(300);
+    $('.upload-error').fadeOut(300);
     $(".no-clips").show();
   },
 
