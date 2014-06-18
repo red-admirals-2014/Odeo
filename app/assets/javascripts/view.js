@@ -25,6 +25,8 @@ Modal.prototype = {
   showModal: function(){
     $('.modal').fadeIn(300);
     $(".no-clips").hide();
+    navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
+    });
   },
 
   closeModal: function(){
@@ -32,6 +34,7 @@ Modal.prototype = {
     $('.upload-success').fadeOut(300);
     $('.upload-error').fadeOut(300);
     $(".no-clips").show();
+
   },
 
   updateSubmitFormAction: function(action_url){
@@ -45,6 +48,7 @@ function noClips(){};
 
 noClips.prototype = {
   showNoClips: function(){
+    $(".no-clips").show();
     $('.modal').fadeIn();
     $(".clip-form").hide();
   },
