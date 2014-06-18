@@ -15,7 +15,7 @@ View.prototype = {
   },
 
   displayPendingUpload: function(){
-    $('.upload-pending').fadeIn(300)
+    $('.upload-pending').fadeIn()
   }
 }
 
@@ -23,18 +23,16 @@ function Modal(){};
 
 Modal.prototype = {
   showModal: function(){
-    $('.modal').fadeIn(300);
+    $('.modal').fadeIn();
     $(".no-clips").hide();
     navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     });
   },
 
   closeModal: function(){
-    $('.modal').fadeOut(300);
-    $('.upload-success').fadeOut(300);
-    $('.upload-error').fadeOut(300);
-    $(".no-clips").show();
-
+    $('.modal').fadeOut();
+    $('.upload-success').fadeOut();
+    $('.upload-error').fadeOut();
   },
 
   updateSubmitFormAction: function(action_url){

@@ -79,15 +79,15 @@ function returnDownloadLink(){
     var returnedUrl = data['output'].url
     insertIntoDatabase(returnedUrl)
   });
-  $('.upload-pending').fadeOut(300)
-  $('.upload-success').fadeIn(300)
+  $('.upload-pending').fadeOut()
+  $('.upload-success').fadeIn()
 
 };
 
 function errorUploadingClip(){
   console.log("Yikes, we can't upload that!")
-  $('.upload-pending').fadeOut(300)
-  $('.upload-error').fadeIn(300)
+  $('.upload-pending').fadeOut()
+  $('.upload-error').fadeIn()
 };
 
 function insertIntoDatabase(returnedURL){
