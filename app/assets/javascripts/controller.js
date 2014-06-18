@@ -54,15 +54,12 @@ Controller.prototype = {
   voteHandler: function(event){
     if (event.type === "swipeleft") {
       voteStatus = "downvote"
-    }
-    else if (event.type === "swiperight") {
+    } else if (event.type === "swiperight") {
       voteStatus = "upvote"
+    } else {
+      voteStatus = event.currentTarget.id
     }
-    else {
-    voteStatus = event.currentTarget.id
-    }
-    this.view.upVoteDownVote(voteStatus)
-    this.player.playNextSong(event);
+    this.player.voteAndPlayNextSong(voteStatus, this.view.upVoteDownVote);
   },
 
   showPending: function(){
