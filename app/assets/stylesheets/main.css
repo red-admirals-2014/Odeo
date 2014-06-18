@@ -223,3 +223,10 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   left: 25%;
 }
 
+/*.recording {
+  visibility: visible;
+}*/
+
+.mobile-recording{
+  visibility: hidden;
+}

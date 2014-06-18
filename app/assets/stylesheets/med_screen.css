@@ -32,4 +32,12 @@
   border: none;
   border-radius: 2px;
 }
+
+/*.recording {
+  visibility: hidden;
+}*/
+
+/*.mobile-recording{
+  visibility: visible;
+}*/
 } /* End Media Query for 600px */
