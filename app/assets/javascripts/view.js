@@ -8,14 +8,11 @@ View.prototype = {
       console.log("UPVOTED!")
       $(".like").fadeIn("fast")
       $(".like").fadeOut("fast")
-      // $('body').append('<h1>Win</h1>').clear()
-
     }
     else {
       console.log("DOWNVOTED!!!")
       $(".nope").fadeIn("fast")
       $(".nope").fadeOut("fast")
-
     }
   }
 }
