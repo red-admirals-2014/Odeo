@@ -143,25 +143,29 @@ a{
   text-align: center;
   position: relative;
 }
-
-
+.upload-success{
+  color: #52a542;
+  display: none;
+}
+.upload-error{
+  color: #eb0f0c;
+  display: none;
+}
+.upload-pending{
+  color: #4183ea;
+  display: none;
+}
 .rotate {
-
 /* Safari */
 -webkit-transform: rotate(45deg);
-
 /* Firefox */
 -moz-transform: rotate(45deg);
-
 /* IE */
 -ms-transform: rotate(45deg);
-
 /* Opera */
 -o-transform: rotate(45deg);
-
 /* Internet Explorer */
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
 }
 
 .like{
@@ -177,3 +181,4 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   top: 210px;
   right: 370px;
 }
+

@@ -13,6 +13,7 @@ Controller.prototype = {
      $('.close-new-clip').on('click', this.closeModal.bind(this) );
      $('.close-no-clips').on('click', this.closeNoClips.bind(this) );
      $('#open-no-clips').on('click', this.showNoClips.bind(this) );
+     $('.pending').on('click', this.showPending.bind(this) );
      $('#cassette').on('click', this.triggerPlay.bind(this) );
      $('.click-vote').on('click', '.vote-button', this.voteHandler.bind(this));
      $('#jp_container_1').on('swipeleft', this.voteHandler.bind(this))
@@ -58,6 +59,8 @@ Controller.prototype = {
     }).done(function(response){
       var upload_form_action = "https:" + response.url;
       self.modalView.updateSubmitFormAction(upload_form_action);
+
+      // Uploaded at Cloud Converter... Msg:
     })
   },
   voteHandler: function(event){
@@ -73,8 +76,12 @@ Controller.prototype = {
     console.log(voteStatus)
     this.view.upVoteDownVote(voteStatus)
     this.player.playNextSong(event);
+  },
+
+  showPending: function(){
+    this.view.displayPendingUpload();
   }
-}
+};
 
 
 
@@ -82,11 +89,16 @@ function returnDownloadLink(){
   $.getJSON(this.url, function(data) {
     var returnedUrl = data['output'].url
     insertIntoDatabase(returnedUrl)
-  })
+  });
+  $('.upload-pending').fadeOut()
+  $('.upload-success').fadeIn()
+
 };
 
 function errorUploadingClip(){
   console.log("Yikes, we can't upload that!")
+  $('.upload-pending').fadeOut()
+  $('.upload-error').fadeIn()
 };
 
 function insertIntoDatabase(returnedURL){
