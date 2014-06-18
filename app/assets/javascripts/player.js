@@ -14,27 +14,37 @@ Player.prototype = {
       supplied: "mp3"
     });
   },
-  playNextSong: function(event){
+
+  voteAndPlayNextSong: function(status, callback){
     $.ajax({
       url: '/votes/create',
       type: 'POST',
       data: {
         url: this.player.jPlayer()[0].lastChild.src,
-        vote: event.target.id
+        vote: status
       }
-    });
+    }).done(function() {
+      this.playNextSong(function() {
+        callback(status)
+      }.bind(this));
+    }.bind(this));
+  },
+
+  playNextSong: function(callback) {
+    debugger //this is the player here,
     $.ajax({
       url: '/clips/next',
       type: 'GET',
     }).done(function(response){
       if (response === "end") {
-        console.log("WE MADE IT!")
         this.pauseSong;
         $('#open-no-clips').trigger('click');
+      } else {
+        callback();
+        this.player.jPlayer("setMedia",{
+          mp3: response
+        }).jPlayer("play")
       }
-      this.player.jPlayer("setMedia",{
-        mp3: response
-      }).jPlayer("play")
     }.bind(this))
   },
 

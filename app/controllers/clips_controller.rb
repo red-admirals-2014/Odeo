@@ -22,9 +22,9 @@ class ClipsController < ApplicationController
     puts "I HIT THE ROUTE"
     next_clip_link = Clip.get_next_clip(current_user, params[:url])
     if next_clip_link == "end"
-      render :text => "end", layout: false
+      render :text => "end"
     else
-      render :text => next_clip_link, layout: false
+      render :text => next_clip_link
     end
   end
 
