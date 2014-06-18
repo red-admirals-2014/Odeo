@@ -12,7 +12,7 @@ $(document).ready( initialize )
     controller.bindEventListener();
 
 
-    setInterval(pollUserRating(), 3000 )
+    setInterval(pollUserRating, 10000 )
 
 
 };
