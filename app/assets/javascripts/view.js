@@ -1,7 +1,13 @@
 // Modal View
 
 function View(){
-
+  this.micButton = 'img#mic.b-med';
+  this.closeNewClipModal = '.close-new-clip';
+  this.closeNoClipsModal = '.close-no-clips';
+  this.openNoClipsModal = '#open-no-clips';
+  this.cassette = '#cassette';
+  this.voteButtons = '.click-vote .vote-button';
+  this.clipUpload = '#clip_upload';
 }
 
 View.prototype = {

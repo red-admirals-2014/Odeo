@@ -9,17 +9,17 @@ function Controller(modal, play, cloudApi, view, noClip){
 
 Controller.prototype = {
   bindEventListener: function(){
-     $('.click-vote').on('click','.b-med', this.openModal.bind(this) );
-     $('.close-new-clip').on('click', this.closeModal.bind(this) );
-     $('.close-no-clips').on('click', this.closeNoClips.bind(this) );
-     $('#open-no-clips').on('click', this.showNoClips.bind(this) );
-     $('#cassette').on('click', this.triggerPlay.bind(this) );
-     $('.click-vote').on('click', '.vote-button', this.voteHandler.bind(this));
-     $('#clip_upload').ajaxForm({
+     $(this.view.micButton).on('click', this.openModal.bind(this) );
+     $(this.view.closeNewClipModal).on('click', this.closeModal.bind(this) );
+     $(this.view.closeNoClipsModal).on('click', this.closeNoClips.bind(this) );
+     $(this.view.openNoClipsModal).on('click', this.showNoClips.bind(this) );
+     $(this.view.cassette).on('click', this.triggerPlay.bind(this) );
+     $(this.view.voteButtons).on('click', this.voteHandler.bind(this));
+     $(this.view.clipUpload).ajaxForm({
         success: returnDownloadLink,
         error: errorUploadingClip
      });
-     $('#cassette').trigger('click');
+     $(this.view.cassette).trigger('click');
      },
   openModal: function(){
     this.modalView.showModal();
@@ -54,8 +54,6 @@ Controller.prototype = {
     this.player.playNextSong(event);
   }
 }
-
-
 
 function returnDownloadLink(){
   $.getJSON(this.url, function(data) {
