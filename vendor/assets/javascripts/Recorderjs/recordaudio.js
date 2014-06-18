@@ -49,7 +49,7 @@
   }
 
 
-  window.onload = function init() {
+  $(document).ready(function(){
     try {
       // webkit shim
       window.AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -66,4 +66,4 @@
 
     // navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     // });
-  };
+  });

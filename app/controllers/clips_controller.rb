@@ -28,10 +28,4 @@ class ClipsController < ApplicationController
       render :text => next_clip_link
     end
   end
-
-  def server
-    @rating = current_user.percent_rating
-    @rating = { value: @rating }
-    render :json => @rating, layout: false
-  end
 end

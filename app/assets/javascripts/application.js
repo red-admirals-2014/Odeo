@@ -12,8 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.form
 //= require turbolinks
 //= require_tree .
-//= require_tree ../../../vendor/assets/javascripts
-
+//= require_tree ../../../vendor/assets/javascripts/filesaver/.
+//= require_tree ../../../vendor/assets/javascripts/jplayer/.
+//= require_tree ../../../vendor/assets/javascripts/mobile/.
+//= require ../../../vendor/assets/javascripts/jquery.form
+//= require_tree ../../../vendor/assets/javascripts/Recorderjs/.
