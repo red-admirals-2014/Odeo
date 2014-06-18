@@ -31,6 +31,14 @@
   border: none;
   border-radius: 2px;
 }
+
+.recording {
+  visibility: hidden;
+}
+
+.mobile-recording{
+  visibility: visible;
+}
 }
 
 @media (max-width : 600px) and ( max-height: 455px ) {
@@ -65,5 +73,12 @@
 #clip_upload input{
   border: none;
   border-radius: 2px;
+}
+.recording {
+  visibility: hidden;
+}
+
+.mobile-recording{
+  visibility: visible;
 }
 }

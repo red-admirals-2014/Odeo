@@ -7,13 +7,15 @@
     <%= file_field_tag 'file', accept: 'audio/*;capture=microphone', value: ' ', class: 'upload_choice'%>
     <%= submit_tag "Submit", class: 'submit close-new-clip' %>
   <% end %>
+  <p class="mobile-recording">Click "Choose File" to record a soundclip. </br>If you record a video, only the audio portion will be kept.</p>
 
 
-
+  <div class="recording">
   <button  class='record' onclick="startRecording(this);">Record</button>
   <button  class='record' onclick="stopRecording(this);" disabled>Stop</button>
 
   <ul id="recordingslist"></ul>
   <pre id="log">
   </pre>
+  </div>
 </div>

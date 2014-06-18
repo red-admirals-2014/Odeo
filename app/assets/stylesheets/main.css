@@ -177,3 +177,11 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   top: 210px;
   right: 370px;
 }
+
+/*.recording {
+  visibility: visible;
+}*/
+
+.mobile-recording{
+  visibility: hidden;
+}
