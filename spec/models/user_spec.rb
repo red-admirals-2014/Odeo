@@ -3,8 +3,8 @@ require 'spec_helper'
 describe User do 
 
   before (:each) do
-    # fake_user = User.create
-    # User.stub(:from_omniauth).and_return( fake_user)
+    fake_user = User.create
+    User.stub(:from_omniauth).and_return( fake_user)
     facebook_auth = {:provider => "facebook", :uid => "asfd", :info => { :email => "test.example.com", :name => "tester"}}
     @user = User.from_omniauth(facebook_auth)
     @user2 = User.from_omniauth(facebook_auth)
