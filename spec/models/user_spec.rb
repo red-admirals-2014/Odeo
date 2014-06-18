@@ -12,10 +12,13 @@ describe User do
     it { should have_many(:votes) }
   end
 
-  it "should create a user when a new user logs in from facebook" do
-    facebook_auth = {"provider" => "facebook", "uid" => "asfd", "info" => { "email" => "test.example.com", "name" => "tester"}}
-    user = User.from_omniauth(facebook_auth)
-    expect(User.last).to eq(user)
+  xit "should create a user when a new user logs in from facebook" do
+    expect { 
+      facebook_auth = {"provider" => "facebook", "uid" => "asfd", "info" => { "email" => "test.example.com", "name" => "tester"}}
+      user = User.from_omniauth(facebook_auth)
+      }.to change(User.count).by(1)
+    # expect(User.last).to eq(user)
+    # expect
   end
 
   it "should return an existing user when an existing user logs in from facebook" do
