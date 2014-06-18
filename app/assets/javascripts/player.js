@@ -31,13 +31,12 @@ Player.prototype = {
   },
 
   playNextSong: function(callback) {
-    debugger //this is the player here,
     $.ajax({
       url: '/clips/next',
       type: 'GET',
     }).done(function(response){
       if (response === "end") {
-        this.pauseSong;
+        this.pauseSong();
         $('#open-no-clips').trigger('click');
       } else {
         callback();
