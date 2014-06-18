@@ -1,11 +1,15 @@
 <div class="modal-content">
   <h1>Upload or Record</h1>
+  <h4 class='upload-success'>Upload successful!</h4>
+  <h4 class='upload-error'>Upload unsuccessful!</h4>
+  <h4 class='upload-pending'>Upload pending...</h4>
+
   <%= image_tag 'delete30.svg', id: 'cancel', class: 'close-new-clip' %>
   <%= form_tag("", id: "clip_upload", :class => "#{current_user.id}", action: :upload, multipart: true, remote: true) do %>
     <%= hidden_field_tag 'input', 'upload' %>
     <%= hidden_field_tag 'outputformat', 'mp3' %>
     <%= file_field_tag 'file', accept: 'audio/*;capture=microphone', value: ' ', class: 'upload_choice'%>
-    <%= submit_tag "Submit", class: 'submit close-new-clip' %>
+    <%= submit_tag "Submit", class: 'submit' %>
   <% end %>
 
 
