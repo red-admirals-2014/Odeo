@@ -13,14 +13,17 @@ function View(){
 View.prototype = {
   upVoteDownVote: function(voteStatus){
     if (voteStatus === "upvote"){
-      console.log("UPVOTED!")
-      // $('body').append('<h1>Win</h1>').clear()
-
+      $(".like").fadeIn("medium")
+      $(".like").fadeOut("medium")
     }
     else {
-      console.log("DOWNVOTED!!!")
-
+      $(".nope").fadeIn("medium")
+      $(".nope").fadeOut("medium")
     }
+  },
+
+  displayPendingUpload: function(){
+    $('.upload-pending').fadeIn()
   }
 }
 
@@ -36,6 +39,8 @@ Modal.prototype = {
 
   closeModal: function(){
     $('.modal').fadeOut();
+    $('.upload-success').fadeOut();
+    $('.upload-error').fadeOut();
   },
 
   updateSubmitFormAction: function(action_url){

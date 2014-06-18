@@ -19,8 +19,11 @@ Controller.prototype = {
         success: returnDownloadLink,
         error: errorUploadingClip
      });
+     $('#jp_container_1').on('swipeleft', this.voteHandler.bind(this))
+     $('#jp_container_1').on('swiperight', this.voteHandler.bind(this))
+     $('.submit').on('click', this.showPending.bind(this) );
      $(this.view.cassette).trigger('click');
-     },
+  },
   openModal: function(){
     this.modalView.showModal();
     this.player.pauseSong();
@@ -44,27 +47,41 @@ Controller.prototype = {
     this.player.initPlayer();
   },
   setProcessIdToSubmitForm: function(){
-    //get process id from cc api that returns the id
     var apiKey = this.cloudApi.getKey();
     var process_id = this.cloudApi.getNewProcess(apiKey);
     this.modalView.updateSubmitFormAction(process_id);
   },
   voteHandler: function(event){
+    if (event.type === "swipeleft") {
+      voteStatus = "downvote"
+    }
+    else if (event.type === "swiperight") {
+      voteStatus = "upvote"
+    }
+    else {
     voteStatus = event.currentTarget.id
+    }
     this.view.upVoteDownVote(voteStatus)
     this.player.playNextSong(event);
+  },
+
+  showPending: function(){
+    this.view.displayPendingUpload();
   }
-}
+};
 
 function returnDownloadLink(){
+  $('.upload-pending').fadeOut();
+  $('.upload-success').fadeIn();
   $.getJSON(this.url, function(data) {
     var returnedUrl = data['output'].url
     insertIntoDatabase(returnedUrl)
-  })
+  });
 };
 
 function errorUploadingClip(){
-  console.log("Yikes, we can't upload that!")
+  $('.upload-pending').fadeOut()
+  $('.upload-error').fadeIn()
 };
 
 function insertIntoDatabase(returnedURL){
