@@ -1,18 +1,24 @@
 // Modal View
 
-function View(){}
+function View(){
+  this.micButton = 'img#mic.b-med';
+  this.closeNewClipModal = '.close-new-clip';
+  this.closeNoClipsModal = '.close-no-clips';
+  this.openNoClipsModal = '#open-no-clips';
+  this.cassette = '#cassette';
+  this.voteButtons = '.click-vote .vote-button';
+  this.clipUpload = '#clip_upload';
+}
 
 View.prototype = {
   upVoteDownVote: function(voteStatus){
     if (voteStatus === "upvote"){
-      console.log("UPVOTED!")
-      $(".like").fadeIn("fast")
-      $(".like").fadeOut("fast")
+      $(".like").fadeIn("medium")
+      $(".like").fadeOut("medium")
     }
     else {
-      console.log("DOWNVOTED!!!")
-      $(".nope").fadeIn("fast")
-      $(".nope").fadeOut("fast")
+      $(".nope").fadeIn("medium")
+      $(".nope").fadeOut("medium")
     }
   },
 
