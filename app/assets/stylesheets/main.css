@@ -32,7 +32,7 @@ font-family: 'Vibur', cursive;
 
 /* Navbar */
 .navbar{
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   right: 0;
@@ -52,7 +52,7 @@ font-family: 'Vibur', cursive;
 
 /* Footer */
 .click-vote{
-  position: fixed;
+  position: relative;
   text-align: center;
   bottom: 0;
   left: 0;
@@ -70,7 +70,7 @@ font-family: 'Vibur', cursive;
     background-color:rgba(0, 0, 0, 0.8);
     text-align: center;
 }
-.modal .clip-form{
+.modal .clip-form, .modal .no-clips{
   width: 80%;
   height: 80%;
   background-color: white;
@@ -108,6 +108,17 @@ font-family: 'Vibur', cursive;
   background-color: #9dea82;
   color: white;
 }
+
+.modal-content a{
+  text-decoration: none;
+  color: #ff4052;
+}
+
+.modal-content li {
+  list-style: none;
+  text-align: center;
+}
+
 form{
   margin: 50px 0;
 }
@@ -127,6 +138,89 @@ a{
   bottom:0;
   right:0;
   text-align: center;
+}
+.jp-audio{
+  text-align: center;
+  position: relative;
+}
+
+.upload-success{
+  color: #52a542;
+  display: none;
+}
+.upload-error{
+  color: #eb0f0c;
+  display: none;
+}
+.upload-pending{
+  color: #4183ea;
+  display: none;
+}
+
+.rotatelike {
+
+/* Safari */
+-webkit-transform: rotate(45deg);
+/* Firefox */
+-moz-transform: rotate(45deg);
+/* IE */
+-ms-transform: rotate(45deg);
+/* Opera */
+-o-transform: rotate(45deg);
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+
+.rotatenope {
+
+/* Safari */
+-webkit-transform: rotate(-45deg);
+
+/* Firefox */
+-moz-transform: rotate(-45deg);
+
+/* IE */
+-ms-transform: rotate(-45deg);
+
+/* Opera */
+-o-transform: rotate(-45deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}
+
+.like{
+  display: none;
+  z-index: 100000;
+  background-color: rgba(255,255,255,0.4);
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: 5em;
+  padding: 3px 39px;
+  color: #84d359;
+  border-radius: 5px;
+  border: 6px solid;
+  position: absolute;
+  top: 25%;
+  right: 25%;
+}
+
+.nope{
+  display: none;
+  z-index: 100000;
+  background-color: rgba(255,255,255,0.4);
+  font-size: 5em;
+  font-family: sans-serif;
+  font-weight: 100;
+  padding: 3px 10px;
+  color: #d34141;
+  border-radius: 5px;
+  border: 6px solid;
+  position: absolute;
+  top: 25%;
+  left: 25%;
 }
 
 .rating {
