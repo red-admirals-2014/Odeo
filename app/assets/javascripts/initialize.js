@@ -10,7 +10,6 @@ $(document).ready( initialize )
 
     var controller = new Controller(recordView, playView,cloudApi, view, noClip);
     controller.bindEventListener();
-    controller.setProcessIdToSubmitForm();
 };
 
 function omniauth(){

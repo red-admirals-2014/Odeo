@@ -24,6 +24,7 @@ Controller.prototype = {
   openModal: function(){
     this.modalView.showModal();
     this.player.pauseSong();
+    this.setProcessIdToSubmitForm();
   },
 
   closeModal: function(){
