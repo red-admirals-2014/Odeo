@@ -19,13 +19,13 @@ describe ClipsController do
     before (:each) do
       @user = User.create( provider: "facebook", uid: "uaf", name: "user1", oauth_token: "kafjkje", oauth_expires_at: Time.now )
     end
-      
+
     it "redirects to root_path upon successful save" do
         session[:user_id] = @user.id
         post :create, {url: "tommy.com"}
         expect(response).to be_redirect
     end
-      
+
     it "puts this failed when not succesful" do
         # This is a useless test because no matter what, the response is a redirect.
         session[:user_id] = @user.id
@@ -51,17 +51,6 @@ describe ClipsController do
       stub_current_user(@user)
       get :next, :url => "https://example.test.com"
       expect(response.body).to include("end")
-    end
-  end
-
-  describe "#server" do
-    before (:each) do
-      @user = User.create( provider: "facebook", uid: "uaf", name: "user1", oauth_token: "kafjkje", oauth_expires_at: Time.now )
-    end
-    it "should return the rating for use in the DOM" do
-      stub_current_user(@user)
-      get :server
-      expect(response.body).to include(@user.percent_rating.to_s)
     end
   end
 

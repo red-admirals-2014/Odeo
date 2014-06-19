@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   match 'clips/next', to: 'clips#next', as: 'next_clip', via: [:get]
   match 'votes/create', to: 'votes#create', as: 'create_vote', via: [:post]
   match 'cc_apikey', to: 'application#apikey', as: 'cc_apikey', via: [:get]
-  match 'server', to: 'clips#server', as: 'server', via: [:get]
 
   root to: 'clips#index'
 
