@@ -12,12 +12,13 @@ describe Clip do
     end
 
     it "should add https:// if it does not exist in the clip_link" do
-      clip = Clip.create(user_id: 1, clip_link: "//test.org")
+      clip = Clip.new(user_id: 1, clip_link: "//test.org")
+      clip.save
       expect(clip.clip_link).to eq("https://test.org")
     end
 
   end
-   
+
 
    context "get links for next song" do
 
@@ -50,5 +51,5 @@ describe Clip do
     end
 
    end
-  
+
 end

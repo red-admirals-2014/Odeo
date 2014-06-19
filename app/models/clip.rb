@@ -24,9 +24,7 @@ class Clip < ActiveRecord::Base
   end
 
   def add_https
-    if self.clip_link.match("https://")
-    else
-      self.clip_link = "https:" + self.clip_link
-    end
+    self.clip_link = "https:#{clip_link}" unless clip_link.match("https://")
   end
+
 end
