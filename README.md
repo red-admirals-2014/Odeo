@@ -1,70 +1,31 @@
-# Stage Fright
+# Odeo
 
 Tinder meets Soundcloud to change the way we judge other's singing.
 
 ## Description of Project
 
-A mobile-web first app that allows users to vote on the song clips they like or don't like that have been created by other users in the StageFright community.
-
-## How to Use the Code
-  - Cloud Storage for Songs - Amazon S3
-  - Hosting - Heroku
-  - Backend - Ruby on the Rails
-  - Frontend - Ember.js MVC Framework (JS, HTML5, CSS3)
-
-### Ember.js
-Ember.js allows us to send a single page to the user and give them the whole app experience from there.
-
-## Link to Heroku
-  - Tommy to update
+A mobile first web-app that allows users to vote on the song clips they like or don't like that have been created by other users in the Odeo community.
 
 ##Contributions by:
 
 Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
 
-## Project Workflow
+## Link to Heroku
+singodeo.herokuapp.com
 
-### Github Workflow
-- Pull Requests:
-  - Dan - Friday
-  - Tommy - Saturday
-  - Jason - Sunday
-  - Amy - Monday
+##How to use (desktop, samsung tablet, droid, non-iphone products)
 
-- Features will be on separate, unique branches.
+Visit singodeo.herokuapp.com and log in with Facebook; you will then be directed to the Odeo home page. Next, you'll automatically hear a short introduction from which you can either swipe left, swipe right, or click one of thes two buttons on the bottom of the screen to begin listening to others singing. If you like what you hear, swipe right (across the casette). If you think the singer could use some practice, swipe left.
 
-### Team Roles
-  - Lead: Tommy Derulo
-  - Testing Czar: Amy Foster
-  - Happiness Engineer: Dan Huong
-  - Team Scrum Master: JSON Derulo
+Click the red button on the bottom of the screen; a modal will pop up asking if you would like to attach a file of your own. Select from a file on your computer and click upload. If you don't have any current recordings, you have the ability to record your own voice. Afterwards, download the file onto your device and upload the file as an attachment. Don't worry about file format, we'll convert your mp4s, wav's, and other file formats to MP3's!
 
-### Team Dynamics
-  - Pairing: Soloing as needed.  Pairing will be called out during feature assignments/stand-ups/scrums.
-  - Standups: Morning and Mid-day (~9:15am and 3 or 4pm and then impromptu team standups as needed)
-  - Retrospectives: After end of the day Standup, quick 5-10 minutes going over what did or did not work and points of improvement.
-  - When We Work: 9-1  Lunch Time 12:30-1:30pm errday
-  - Team: Team
+That's it, you are now a part of the Odeo community. Others will now be able to listen to your singing and can vote on your song clips. The percentage on the top portion of the page will display your overall voice approval. If your number is low, feel free to upload more clips to increase your vocal percentage!
 
-### Product Management Tools
+Oh, and don't forget, your uploads will be anonymous, so users won't know who uploaded what clip.
 
-  - Trello: Yes
-  - TravisCI: Yes
 
-### Project Learning Goals
-  - Learn Ember
-  - Solidify MVC JS Pattern
-  - Testing: Jasmine and RSpec
-  - Successful Git WOrkflow
-  - Agile Development and Product Planning/Execution
-  - Leadership Skills (Tommmy Derulo)
+##How to use (mobile apple products)
 
-### Coding Strategies
-  - All pull requests must be accompanied by a respective test suite for any feature.
-  - Agreed To Coding Conventions throughout the stack
-  - Unifying Style for the Site's Design
-  - Work delegation: Work on what you want to work on, not necessarily what you're great at.
+Unfortunately users with an ipad or iphone will be unable to upload audio clips of their recordings. However, users can still vote on other's clips, listen to music, and enjoy watching their voice approval change over time.
 
-### Project Outline
 
-[Imgur](http://i.imgur.com/zv44vOG.jpg)

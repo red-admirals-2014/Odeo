@@ -61,8 +61,8 @@ Controller.prototype = {
   }
 };
 function returnDownloadLink(){
-  $(this.view.uploadPending).fadeOut();
-  $(this.view.uploadSuccess).fadeIn();
+  $('.upload-pending').fadeOut();
+  $('.upload-success').fadeIn();
   $.getJSON(this.url, function(data) {
     var returnedUrl = data['output'].url
     insertIntoDatabase(returnedUrl)
@@ -77,5 +77,7 @@ function insertIntoDatabase(returnedURL){
     url: "/clips",
     type: "POST",
     data: {url: returnedURL}
-  }).success(displayInfo)
+  })
 };
+
+

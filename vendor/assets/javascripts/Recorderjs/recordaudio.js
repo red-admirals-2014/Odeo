@@ -49,6 +49,8 @@
   }
 
 
+
+//this stuff works for AMY
   $(document).ready(function(){
     try {
       // webkit shim
@@ -67,3 +69,8 @@
     // navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     // });
   });
+
+
+
+
+
