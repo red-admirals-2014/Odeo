@@ -15,7 +15,6 @@ function View(){
 View.prototype = {
   upVoteDownVote: function(voteStatus){
     if (voteStatus === "upvote"){
-      console.log(voteStatus)
       $(".like").fadeIn("medium")
       $(".like").fadeOut("medium")
     }
