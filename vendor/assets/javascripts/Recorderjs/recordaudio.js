@@ -49,8 +49,10 @@
   }
 
 
-window.onload = function init(){
-     try {
+
+//this stuff works for AMY
+  $(document).ready(function(){
+    try {
       // webkit shim
       window.AudioContext = window.AudioContext || window.webkitAudioContext;
       navigator.getUserMedia = ( navigator.getUserMedia ||
@@ -66,28 +68,9 @@ window.onload = function init(){
 
     // navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
     // });
-}
+  });
 
 
 
 
 
-////this stuff works for AMY
-  // $(document).ready(function(){
-  //   try {
-  //     // webkit shim
-  //     window.AudioContext = window.AudioContext || window.webkitAudioContext;
-  //     navigator.getUserMedia = ( navigator.getUserMedia ||
-  //                      navigator.webkitGetUserMedia ||
-  //                      navigator.mozGetUserMedia ||
-  //                      navigator.msGetUserMedia);
-  //     window.URL = window.URL || window.webkitURL;
-
-  //     audio_context = new AudioContext;
-  //   } catch (e) {
-  //     alert('No web audio support in this browser!');
-  //   }
-
-  //   // navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
-  //   // });
-  // });
