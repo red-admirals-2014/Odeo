@@ -12,11 +12,9 @@ CloudAPI.prototype = {
     }).done(function(key){
       apiKey = key;
     })
-
     return apiKey;
   },
   getNewProcess: function(apiKey){
-    var process_url;
     $.ajax({
       url: this.ccProcessUrl,
       type: 'POST',
