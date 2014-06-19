@@ -32,4 +32,31 @@ describe("CloudAPI", function(){
     expect(promise.done).toHaveBeenCalled()
   });
 
+  it("can initiate a new process on cloud convert", function(){
+    // var apiKey = cloudApi.getKey();
+    var promise = {
+      done: function(response){
+        response({ url: "foobar" });
+      }
+    }
+
+    spyOn(promise, "done").and.callThrough();
+    spyOn($, "ajax").and.returnValue(promise);
+
+    var process_url = cloudApi.getNewProcess("test");
+    expect(process_url).toEqual ("https:foobar");
+
+    expect($.ajax).toHaveBeenCalledWith({
+      url: cloudApi.ccProcessUrl,
+      type: 'POST',
+      data: {
+        apikey: "test",
+        inputformat: 'wav',
+        outputformat: 'mp3'
+      },
+      async: false
+    });
+
+    expect(promise.done).toHaveBeenCalled();
+  })
 })
