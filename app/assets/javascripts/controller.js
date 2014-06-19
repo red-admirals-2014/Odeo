@@ -61,7 +61,6 @@ Controller.prototype = {
   }
 };
 function returnDownloadLink(){
-  debugger
   $('.upload-pending').fadeOut();
   $('.upload-success').fadeIn();
   $.getJSON(this.url, function(data) {
