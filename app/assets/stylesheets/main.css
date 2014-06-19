@@ -53,14 +53,19 @@ font-family: 'Vibur', cursive;
   font-weight: 300;
   margin:  0px 20px;
 }
-a {
+a #login{
   text-decoration: none;
-  color: black;
-  padding-bottom: 5px;
+  color: white;
 }
 
-.navbar a:visited {
-  color: black
+ul a{
+  color: black;
+
+}
+a {
+  text-decoration: none;
+  color: white;
+  padding-bottom: 5px;
 }
 
 .navbar a:hover{
@@ -142,10 +147,6 @@ form{
 }
 
 /* Universal Styling */
-a{
-  text-decoration: none;
-  color: black;
-}
 .media-center{
   position: absolute;
   margin: auto;
