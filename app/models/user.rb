@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :clips
   has_many :votes
+  validates :provider, :uid, :name, :oauth_token, :oauth_expires_at, presence: true
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
