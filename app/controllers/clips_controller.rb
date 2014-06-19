@@ -1,15 +1,13 @@
 
 class ClipsController < ApplicationController
   def index
-    if current_user
-      @rating = current_user.percent_rating
-    end
+    @rating = current_user.percent_rating if current_user
   end
 
   def create
     clip = current_user.clips.new(clip_link: params[:url])
 
-    if clip.save && params[:error] == nil
+    if clip.save
       redirect_to root_path
     else
       redirect_to root_path
