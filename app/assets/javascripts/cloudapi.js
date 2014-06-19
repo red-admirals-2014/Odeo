@@ -5,7 +5,6 @@ function CloudAPI(){
 
 CloudAPI.prototype = {
   getKey: function(){
-    var apiKey;
     $.ajax({
       url: this.ccApiKeyRoute,
       type: 'GET',
@@ -13,6 +12,7 @@ CloudAPI.prototype = {
     }).done(function(key){
       apiKey = key;
     })
+
     return apiKey;
   },
   getNewProcess: function(apiKey){

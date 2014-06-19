@@ -22,14 +22,14 @@ describe("CloudAPI", function(){
     spyOn($, "ajax").and.returnValue(promise)
 
     expect(cloudApi.getKey()).toEqual("foobar")
+
     expect($.ajax).toHaveBeenCalledWith({
       url: cloudApi.ccApiKeyRoute,
-      type: 'GET',
+      type: "GET",
       async: false
     });
 
     expect(promise.done).toHaveBeenCalled()
   });
-
 
 })
