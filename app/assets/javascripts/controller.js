@@ -69,7 +69,6 @@ function returnDownloadLink(){
   });
 };
 function errorUploadingClip(){
-  debugger
   $(this.view.uploadPending).fadeOut()
   $(this.view.uploadError).fadeIn()
 };
