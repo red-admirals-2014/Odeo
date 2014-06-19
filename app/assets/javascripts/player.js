@@ -1,5 +1,5 @@
 function Player(){
-  // this.player = $("#jquery_jplayer_1");
+  this.player = $("#jquery_jplayer_1");
 };
 Player.prototype = {
   initPlayer: function(response){

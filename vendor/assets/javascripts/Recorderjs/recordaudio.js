@@ -63,7 +63,7 @@
 
       audio_context = new AudioContext;
     } catch (e) {
-      alert('No web audio support in this browser!');
+      // alert('No web audio support in this browser!');
     }
 
     // navigator.getUserMedia({audio: true}, startUserMedia, function(e) {
