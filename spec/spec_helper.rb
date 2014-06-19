@@ -5,6 +5,17 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
+#########################################
+OmniAuth.config.test_mode = true
+omniauth_hash =
+    {:provider => "facebook",
+     :uid      => "1234",
+     :info   => {:name       => "John Doe",
+                 :email      => "johndoe@email.com"},
+     :credentials => {:token => "testtoken234tsdf"}}
+
+OmniAuth.config.add_mock(:facebook, omniauth_hash)
+########################################
 
 Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
