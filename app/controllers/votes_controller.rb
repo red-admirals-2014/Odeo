@@ -1,10 +1,10 @@
 class VotesController < ApplicationController
 
 	def create
-    p "These are our params"
+    p "these are your params"
     p params
     song_url = params[:url]
-    base_song_url = "https://srv23.cloudconvert.org/download/i7F82KLc"
+    base_song_url = "https://s3-us-west-1.amazonaws.com/akfoster/users/Music/01-03-+Dirt+and+Roses.mp3"
     user_vote = params[:vote]
     clip = Clip.find_by_clip_link(song_url)
 
@@ -17,7 +17,8 @@ class VotesController < ApplicationController
         render :text => "downvote", layout: false
       end
     else
-      render :text => "error: something went wrong", layout: false
+      p "Now I am here!"
+      render :text => "error", layout: false
     end
 	end
 end
