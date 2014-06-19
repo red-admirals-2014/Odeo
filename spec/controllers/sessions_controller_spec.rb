@@ -2,8 +2,7 @@ require 'spec_helper'
 
 describe SessionsController do
     before (:each) do
-      fake_user = User.create
-      User.stub(:from_omniauth).and_return( fake_user )
+      @user = User.create( provider: "facebook", uid: "uaf", name: "user1", oauth_token: "kafjkje", oauth_expires_at: Time.now )
     end
 
   describe "#create" do
