@@ -10,6 +10,8 @@ A mobile first web-app that allows users to vote on the song clips they like or 
 
 Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
 
+## Link to Heroku
+singodeo.herokuapp.com
 
 ##How to use (desktop, samsung tablet, droid, non-iphone products)
 
@@ -26,6 +28,4 @@ Oh, and don't forget, your uploads will be anonymous, so users won't know who up
 
 Unfortunately users with an ipad or iphone will be unable to upload audio clips of their recordings. However, users can still vote on other's clips, listen to music, and enjoy watching their voice approval change over time.
 
-## Link to Heroku
-singodeo.herokuapp.com
 
