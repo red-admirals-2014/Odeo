@@ -4,7 +4,6 @@ function Controller(modal, play, cloudApi, view, noClip){
   this.cloudApi = cloudApi;
   this.view = view;
   this.noClip = noClip;
-
 }
 
 Controller.prototype = {
@@ -19,9 +18,9 @@ Controller.prototype = {
         success: returnDownloadLink,
         error: errorUploadingClip
      });
-     $('#jp_container_1').on('swipeleft', this.voteHandler.bind(this))
-     $('#jp_container_1').on('swiperight', this.voteHandler.bind(this))
-     $('.submit').on('click', this.showPending.bind(this) );
+     $(this.view.player).on('swipeleft', this.voteHandler.bind(this))
+     $(this.view.player).on('swiperight', this.voteHandler.bind(this))
+     $(this.view.submitButton).on('click', this.showPending.bind(this) );
      $(this.view.cassette).trigger('click');
   },
   openModal: function(){
@@ -29,20 +28,16 @@ Controller.prototype = {
     this.player.pauseSong();
     this.setProcessIdToSubmitForm();
   },
-
   closeModal: function(){
     this.modalView.closeModal();
     this.player.unpauseSong();
   },
-
   closeNoClips: function(){
     this.noClip.closeNoClips();
   },
-
   showNoClips: function() {
     this.noClip.showNoClips();
   },
-
   triggerPlay: function(){
     this.player.initPlayer();
   },
@@ -61,26 +56,22 @@ Controller.prototype = {
     }
     this.player.voteAndPlayNextSong(voteStatus, this.view.upVoteDownVote);
   },
-
   showPending: function(){
     this.view.displayPendingUpload();
   }
 };
-
 function returnDownloadLink(){
-  $('.upload-pending').fadeOut();
-  $('.upload-success').fadeIn();
+  $(this.view.uploadPending).fadeOut();
+  $(this.view.uploadSuccess).fadeIn();
   $.getJSON(this.url, function(data) {
     var returnedUrl = data['output'].url
     insertIntoDatabase(returnedUrl)
   });
 };
-
 function errorUploadingClip(){
-  $('.upload-pending').fadeOut()
-  $('.upload-error').fadeIn()
+  $(this.view.uploadPending).fadeOut()
+  $(this.view.uploadError).fadeIn()
 };
-
 function insertIntoDatabase(returnedURL){
   $.ajax({
     url: "/clips",
