@@ -69,7 +69,6 @@ function returnDownloadLink(){
   });
 };
 function errorUploadingClip(){
-  debugger
   $(this.view.uploadPending).fadeOut()
   $(this.view.uploadError).fadeIn()
 };
@@ -78,5 +77,7 @@ function insertIntoDatabase(returnedURL){
     url: "/clips",
     type: "POST",
     data: {url: returnedURL}
-  }).success(displayInfo)
+  })
 };
+
+
