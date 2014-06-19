@@ -4,7 +4,7 @@ describe VotesController do
   describe "create" do
 
     it "renders error when the current song matches the default base_song " do
-      post :create, song_url: "https://s3-us-west-1.amazonaws.com/akfoster/users/Music/01-03-+Dirt+and+Roses.mp3"
+      post :create, song_url: "https://s3-us-west-1.amazonaws.com/akfoster/odeo/odeo_intro.mp3"
       expect(response.body).to eq("error")
     end
 

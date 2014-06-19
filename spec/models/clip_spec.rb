@@ -31,7 +31,7 @@ describe Clip do
     end
 
     it "should get the link for the next song when the first song plays" do
-      next_clip = Clip.get_next_clip(@user, "https://s3-us-west-1.amazonaws.com/akfoster/users/Music/01-03-+Dirt+and+Roses.mp3")
+      next_clip = Clip.get_next_clip(@user, "https://s3-us-west-1.amazonaws.com/akfoster/odeo/odeo_intro.mp3")
       expect(next_clip).to eq(@new_clip.clip_link)
     end
 

@@ -6,7 +6,7 @@ class Clip < ActiveRecord::Base
   before_save :add_https
 
   def self.get_next_clip(user, song_url)
-    if song_url == "https://s3-us-west-1.amazonaws.com/akfoster/users/Music/01-03-+Dirt+and+Roses.mp3"
+    if song_url == "https://s3-us-west-1.amazonaws.com/akfoster/odeo/odeo_intro.mp3"
       potential_next_songs = self.where(created_at: (Time.now - 1.day)..Time.now + 1.day)
       voted_on = potential_next_songs.includes(:votes).where('votes.user_id = ?', user.id).references(:votes)
       clip_link = (potential_next_songs - voted_on).sample.clip_link

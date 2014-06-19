@@ -6,7 +6,7 @@ Player.prototype = {
     this.player.jPlayer({
       ready: function(response){
         $(this).jPlayer("setMedia", {
-         mp3: "https://s3-us-west-1.amazonaws.com/akfoster/users/Music/01-03-+Dirt+and+Roses.mp3",
+         mp3: "https://s3-us-west-1.amazonaws.com/akfoster/odeo/odeo_intro.mp3",
         }).jPlayer("play");
       },
       supplied: "mp3"
