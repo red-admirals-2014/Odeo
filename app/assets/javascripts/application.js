@@ -11,11 +11,8 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.form
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require_tree ../../../vendor/assets/javascripts/filesaver/.
-//= require_tree ../../../vendor/assets/javascripts/jplayer/.
-//= require_tree ../../../vendor/assets/javascripts/mobile/.
-//= require ../../../vendor/assets/javascripts/jquery.form
-//= require_tree ../../../vendor/assets/javascripts/Recorderjs/.
+//= require_tree ../../../vendor/assets/javascripts
