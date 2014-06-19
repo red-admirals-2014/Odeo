@@ -22,7 +22,6 @@ describe ClipsController do
         expect(response).to be_redirect
       end
       it "puts this failed when not succesfull" do
-        # This is a useless test because no matter what, the response is a redirect.
         @user = User.create
         session[:user_id] = @user.id
         post :create

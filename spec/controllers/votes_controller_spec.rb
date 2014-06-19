@@ -14,14 +14,16 @@ describe VotesController do
     end
 
     it "creates an upvote if the user_vote is equal to 'upvote' " do
-      User.create
-      @clip = Clip.create(user_id: 1, clip_link: "tommy.com")
-      post :create, {user_vote: 'upvote', user_id: 1, clip: @clip, song_url: "bob.com"}
-      expect(@clip.votes.count).to eq(1)
+      current_user = User.create
+      song_url = "tommy.com"
+      clip = Clip.create(user_id: 1, clip_link: "tommy.com" )
+      post :create, {url: "tommy.com", vote: "upvote"}
+      expect(clip.votes.count).to eq(1)
 
     end
 
     it "creates a downvote if the user_vote is equal to 'downvote' " do
+      pending
 
     end
 
