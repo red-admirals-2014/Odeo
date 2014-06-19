@@ -78,5 +78,7 @@ function insertIntoDatabase(returnedURL){
     url: "/clips",
     type: "POST",
     data: {url: returnedURL}
-  }).success(displayInfo)
+  })
 };
+
+
