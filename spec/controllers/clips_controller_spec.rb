@@ -54,15 +54,4 @@ describe ClipsController do
     end
   end
 
-  describe "#server" do
-    before (:each) do
-      @user = User.create( provider: "facebook", uid: "uaf", name: "user1", oauth_token: "kafjkje", oauth_expires_at: Time.now )
-    end
-    it "should return the rating for use in the DOM" do
-      stub_current_user(@user)
-      get :server
-      expect(response.body).to include(@user.percent_rating.to_s)
-    end
-  end
-
 end

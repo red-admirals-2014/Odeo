@@ -14,7 +14,7 @@ describe VotesController do
     end
 
     it "creates an upvote if the user_vote is equal to 'upvote' " do
-      user = User.create
+      user = User.create( provider: "facebook", uid: "uaf", name: "user1", oauth_token: "kafjkje", oauth_expires_at: Time.now )
       session[:user_id] = user.id
       clip = Clip.create(user_id: 1, clip_link: "//tommy.com" )
       post :create, url: "https://tommy.com", vote: "upvote"
@@ -22,7 +22,7 @@ describe VotesController do
     end
 
     it "creates a downvote if the user_vote is equal to 'downvote' " do
-      user = User.create
+      user = User.create( provider: "facebook", uid: "uaf", name: "user1", oauth_token: "kafjkje", oauth_expires_at: Time.now )
       session[:user_id] = user.id
       clip = Clip.create(user_id: 1, clip_link: "//tommy.com")
       post :create, url: "https://tommy.com", vote: "downvote"
