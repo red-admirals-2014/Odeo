@@ -1,8 +1,6 @@
-// Play View
 function Player(){
   this.player = $("#jquery_jplayer_1");
 };
-
 Player.prototype = {
   initPlayer: function(response){
     this.player.jPlayer({
@@ -14,7 +12,6 @@ Player.prototype = {
       supplied: "mp3"
     });
   },
-
   voteAndPlayNextSong: function(status, callback){
     $.ajax({
       url: '/votes/create',
@@ -29,7 +26,6 @@ Player.prototype = {
       }.bind(this));
     }.bind(this));
   },
-
   playNextSong: function(callback) {
     $.ajax({
       url: '/clips/next',
@@ -46,11 +42,9 @@ Player.prototype = {
       }
     }.bind(this))
   },
-
   pauseSong: function(){
     this.player.jPlayer("pause")
   },
-
   unpauseSong: function(){
     this.player.jPlayer("play")
   }
