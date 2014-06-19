@@ -2,7 +2,16 @@
 
   <h1>Odeo</h1>
   <ul>
-      <li><%= @rating %>% voice approval</li>
+
+    <% if @rating < 60 %>
+      <li style = "color:red"><%= @rating %>% voice approval</li>
+    <% elsif @rating >= 60 && @rating <80  %>
+      <li style = "color:orange"><%= @rating %>% voice approval</li>
+    <% else %>
+      <li style = "color:green"><%= @rating %>% voice approval</li>
+    <% end %>
+
+
       <li><%= link_to 'logout', signout_path %></li>
   </ul>
 </div>
