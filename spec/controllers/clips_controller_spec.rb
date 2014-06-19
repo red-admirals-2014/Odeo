@@ -15,39 +15,40 @@ describe ClipsController do
   end
 
   describe "#create" do
-      it "redirects to root_path upon successfull save" do
-        @user = User.create
+
+    before (:each) do
+      @user = User.create( provider: "facebook", uid: "uaf", name: "user1", oauth_token: "kafjkje", oauth_expires_at: Time.now )
+    end
+
+    it "redirects to root_path upon successful save" do
         session[:user_id] = @user.id
         post :create, {url: "tommy.com"}
         expect(response).to be_redirect
-      end
-      it "puts this failed when not succesfull" do
+    end
+
+    it "puts this failed when not succesful" do
         # This is a useless test because no matter what, the response is a redirect.
-        @user = User.create
         session[:user_id] = @user.id
         post :create
         expect(response).to be_redirect
-      end
     end
+  end
 
   describe "#next" do
 
     before (:each) do
-      fake_user = User.create
-      User.stub(:from_omniauth).and_return( fake_user)
-      facebook_auth = {"provider" => "facebook", "uid" => "asfd", "info" => { "email" => "test.example.com", "name" => "tester"}}
-      @current_user = User.from_omniauth(facebook_auth)
+      @user = User.create( provider: "facebook", uid: "uaf", name: "user1", oauth_token: "kafjkje", oauth_expires_at: Time.now )
     end
 
     it "renders the next link when the link is not the end" do
-      stub_current_user(@current_user)
+      stub_current_user(@user)
       new_clip = Clip.create(user_id: 1, clip_link: "https://test.example.org")
       get :next, :url => "https://example.test.com"
       expect(response.body).to include(new_clip.clip_link)
     end
 
     it "renders end when there are no more songs" do
-      stub_current_user(@current_user)
+      stub_current_user(@user)
       get :next, :url => "https://example.test.com"
       expect(response.body).to include("end")
     end
