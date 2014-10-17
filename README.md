@@ -11,7 +11,7 @@ A mobile first web-app that allows users to vote on the song clips they like or 
 Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
 
 ## Link to Heroku
-singodeo.herokuapp.com
+[singodeo.herokuapp.com](singodeo.herokuapp.com)
 
 ##How to use (desktop, samsung tablet, droid, non-iphone products)
 
