@@ -2,6 +2,9 @@
 
 Tinder meets Soundcloud to change the way we judge other's singing.
 
+## Link to Heroku
+[singodeo.herokuapp.com](singodeo.herokuapp.com)
+
 ## Description of Project
 
 A mobile first web-app that allows users to vote on the song clips they like or don't like that have been created by other users in the Odeo community.
@@ -9,9 +12,6 @@ A mobile first web-app that allows users to vote on the song clips they like or 
 ##Contributions by:
 
 Tommy Carpenito, Amy Foster, Dan Huang, and Jason Smith
-
-## Link to Heroku
-[singodeo.herokuapp.com](singodeo.herokuapp.com)
 
 ##How to use (desktop, samsung tablet, droid, non-iphone products)
 
